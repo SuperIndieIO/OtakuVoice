@@ -75,8 +75,6 @@
         <?php $SFS = 0 ?>
             <?php query_posts('showposts=2&offset=3'); ?>
             <?php while( $wp_query->have_posts() ) : $wp_query>the_post(); ?>
-            <?php if( $post->ID == $primary ) {continue;} ?>
-            <?php if( $post->ID == $secondary ) {continue;} ?>
             <?php $SFS++ ?>
 
             <?php $post = get_the_ID(); ?>   
@@ -111,10 +109,8 @@
         <div id='OV-MainPosts'>
             
             <?php $c = 0 ?>
-            <?php wp_reset_query(); ?>
-            <?php global $wp_query, $paged; $paged = (get_query_var('paged')) ? get_query_var('paged') : 1; $query = new WP_Query( ); ?>
+            <?php query_posts('showposts=6&offset=5'); ?>
             <?php if ( $wp_query->have_posts() ) : while( $wp_query->have_posts() ) : $wp_query>the_post(); ?>
-            <?php if( ($post->ID == $primary) || ($post->ID == $secondary) || ($post->ID == $tertiary) || ($post->ID == $fourth) || ($post->ID == $fifth) ) {continue;} ?>
             <?php if ( $c==6 ) { break; } ?>
             <?php $c++ ?>
 

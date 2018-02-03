@@ -12,10 +12,19 @@
         <!--Wordpress Loop Code-->
         <?php $post = get_the_ID(); ?>   
         <?php $primary = $post; ?>
-        <?php $thumb = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'post-large' ); ?>
+        <?php $xdesktop = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'post-xlarge' ); ?>
+        <?php $sdesktop = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'post-large' ); ?>
+        <?php $tablet = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'post-medium' ); ?>
+        <?php $small = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'post-small' ); ?>
         <div id='OV-Post'>
 		<span itemprop="image" itemscope itemtype="http://schema.org/ImageObject">
-            <img id='OV-PostImage' src='<?php echo $thumb[0] ?>' />
+            <picture>
+                <source media='(max-width: 479px)' srcset='<?php echo $mobile[0] ?>'>
+                <source media='(min-width: 480px) and (max-width: 639px)' srcset='<?php echo $tablet[0] ?>'>
+                <source media='(min-width: 640px) and (max-width: 960px)' srcset='<?php echo $sdesktop[0] ?>'>
+                <source media='(min-width: 960px)' srcset='<?php echo $xdesktop[0] ?>'>
+                <img id='OV-PostImage' src='<?php echo $xdesktop[0] ?>'>
+            </picture>
 			<meta itemprop='url' content='<?php echo $thumb[0] ?>'/>
 			<meta itemprop='width' content='1296'/>
 			<meta itemprop='height' content='720'/>

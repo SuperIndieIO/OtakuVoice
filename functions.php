@@ -1,7 +1,10 @@
 <?php
     
 add_theme_support( 'post-thumbnails' );
-add_image_size( 'post-large', 1296, 0, false );
+add_image_size( 'post-xlarge', 1296, 0, false );
+add_image_size( 'post-large', 960, 0, false );
+add_image_size( 'post-medium', 640, 0, false );
+add_image_size( 'post-small', 480, 0, false );
 add_image_size( 'post-amp', 1280, 720, true );
 
 add_image_size( '16/9-xlarge', 1296, 729, true );
@@ -18,6 +21,14 @@ add_image_size( '32/9-xlarge', 1280, 360, true );
 add_image_size( '32/9-large', 960, 270, true );
 add_image_size( '32/9-medium', 640, 180, true );
 add_image_size( '32/9-small', 480, 135, true );
+
+add_action('template_include','wp_archive');
+function wp_archive( $template ){
+    if( is_front_page() && is_paged() ){
+        $template = locate_template(array('archive.php','index.php'));
+        }
+    return $template;
+    }
 
 function numeric_posts_nav() {
 
@@ -87,4 +98,17 @@ function numeric_posts_nav() {
 	echo '</ul></nav>' . "\n";
 
 }
+
+function my_new_contactmethods( $contactmethods ) {
+    // Add Twitter
+    $contactmethods['twitter'] = 'Twitter';
+    // Add Facebook
+    $contactmethods['facebook'] = 'Facebook';
+    // Add Title
+    $contactmethods['title'] = 'Title';
+
+    return $contactmethods;
+}
+add_filter('user_contactmethods','my_new_contactmethods',10,1);
+
 ?>

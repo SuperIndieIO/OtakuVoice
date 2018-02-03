@@ -169,6 +169,7 @@ article > p {
     position: absolute;
     top: 0;
     object-fit: cover;
+    border-radius: 4px;
 }
 .OV-PostSmallText {
     width: calc(100% - 16px);
@@ -179,6 +180,7 @@ article > p {
     position: absolute;
     bottom: 0;
     color: #f6f6f6;
+    border-radius: 0 0 4px 4px;
     font-family: 'Roboto:900', sans-serif;
     font-size: 1em;
     overflow: hidden;
