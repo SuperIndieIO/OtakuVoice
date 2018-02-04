@@ -24,6 +24,10 @@ article > p {
     font-family: 'Open Sans', sans-serif;
     font-weight: 400;
 }
+
+artice > ins {
+    margin: 8px 0;
+}
 /* Main Post Styles */
 #OV-Post {
     width: 100%;
