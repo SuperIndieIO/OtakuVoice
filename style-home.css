@@ -102,7 +102,7 @@ footer {
 }
 .OV-SemiFeaturedText {
     width: calc(100% - 16px);
-    padding: 8px;
+    padding: 8px 8px 0 8px;
     position: absolute;
     bottom: 0;
     border-radius: 0 0 4px 4px;
@@ -114,6 +114,7 @@ footer {
 .OV-SemiFeaturedHeadline {
     font-size: 2em;
     font-weight: 900;
+    padding-bottom: 8px
     }
 .OV-SemiFeaturedSubHeadline {
     max-height: 0;
@@ -121,10 +122,11 @@ footer {
     font-size: 1em;
     font-style: italic;
     font-weight: 500;
-    transition: max-height 1s ease, visibility 1s;
+    transition: max-height 1s ease, visibility 1s, padding-bottom .25s;
     }
 .OV-SemiFeatured:hover .OV-SemiFeaturedSubHeadline {
     max-height: 4em;
+    padding-bottom: 8px;
     visibility: visible;
     }
 

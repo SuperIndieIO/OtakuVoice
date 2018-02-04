@@ -21,7 +21,6 @@
         <a href="https://www.youtube.com/channel/UC0hq2bUJYw7NN12pf_7HDCw" onclick="ga('send', 'event', 'Social Follow', 'Youtube Follow', 'Youtube', '1');" target='_blank'>
         <img src='<?php echo get_template_directory_uri(); ?>/social-icons/youtube.svg' class='social-image-follow' /></a>
     </div>
-
     <div id='OV-FooterInfo'>
         <a href='<?php echo esc_url( home_url( '/' ) ); ?>about-us'>About Us</a>
         <a href='<?php echo esc_url( home_url( '/' ) ); ?>contact-us'>Contact Us</a>
@@ -30,17 +29,6 @@
     </div>
 </footer>
 <span>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-110231473-1"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'UA-110231473-1');
-      gtag('set', {'user_id': 'USER_ID'}); // Set the user ID using signed-in user_id.
-    </script>
-
     <!--Defer Image Load JS-->
     <script>
         function init() {
@@ -52,8 +40,34 @@
         window.onload = init;
     </script>
     
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script src="https://www.googletagmanager.com/gtag/js?id=UA-110231473-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-110231473-1');
+      gtag('set', {'user_id': 'USER_ID'}); // Set the user ID using signed-in user_id.
+    </script>
+    
+    <!--JQuery Code-->
+    <script src='<?php echo get_template_directory_uri(); ?>/js/jquery.min.js'></script>
+    
+    <!--Advertising.js-->
+    <script type='text/javascript' src='<?php echo get_template_directory_uri(); ?>/js/advertising.js'></script>
+    
+    <!--Publishing.js-->
+    <script type='text/javascript' src='<?php echo get_template_directory_uri(); ?>/js/OV-Publishing.js'></script>
+    
+    <!--GA Page Scrolling-->
+    <script async type='text/javascript' src='<?php echo get_template_directory_uri(); ?>/js/OV-Page.js?r=<?php echo time(); ?>'></script>
+    
     <!--In-Article Advertising JS-->
-    <script src='<?php echo get_template_directory_uri(); ?>/js/OV-InArticle.js?r=<?php echo time(); ?>'></script>
+    <script async defer type='text/javascript' src='<?php echo get_template_directory_uri(); ?>/js/OV-InArticle.js?r=<?php echo time(); ?>'></script>
+    
+    <!--In-Sidebar Advertising JS-->
+    <script async defer type='text/javascript' src='<?php echo get_template_directory_uri(); ?>/js/OV-InSidebar.js?r=<?php echo time(); ?>'></script>
     
     <!--Start Quantcast JS-->
     <script type="text/javascript">

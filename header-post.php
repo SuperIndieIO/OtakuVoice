@@ -39,7 +39,4 @@
     
     <!--Adsense Code-->
     <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-    
-    <!--JQuery Code-->
-    <script src='<?php echo get_template_directory_uri(); ?>/js/jquery.min.js'></script>
 </head>

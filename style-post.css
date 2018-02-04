@@ -6,7 +6,6 @@ html, body {
     margin: 0;
     padding: 0;
     background-color: #E5E5F2;
-    overflow: auto;
 }
 header {
     max-height: 60px;
@@ -104,6 +103,11 @@ article > p {
     border-radius: 50%;
     }
 
+.sticky {
+    position: sticky;
+    top: 16px;
+}
+
 /*Footer IDs */
 #OV-FooterLogo {
     display: block;
@@ -155,8 +159,7 @@ article > p {
     }
 .OV-SidebarOther {
     width: 100%;
-    margin: 0 auto 16px auto;
-    float: left;
+    margin: 16px auto 16px auto;
     }
 .OV-PostSmall { 
     padding-top: 56.25%;
@@ -270,6 +273,10 @@ article > p {
         grid-template-columns: 1fr 1fr 1fr;
         grid-gap: 16px 16px;
     }
+    .OV-SidebarOther {
+        width: calc(100% - 64px);
+        margin: 16px 32px;
+    }
 }
 @media only screen and (max-width: 639px) { 
     main {
@@ -302,5 +309,9 @@ article > p {
     }
     .OV-PostSmall {
         padding-top: 28.125%;
+    }
+    .OV-SidebarOther {
+        width: calc(100% - 32px);
+        margin: 16px 16px;
     }
 }
