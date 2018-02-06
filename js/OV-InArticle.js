@@ -40,11 +40,11 @@ $( document ).ready(function() {
     }
 
     //Change Creative to a House Ad
-    var HouseAdChance = 11;
+    var HouseAdChance = 0;
     var HouseAdFloorA = Math.floor(Math.random()*100) + 1;
     var HouseAdFloorB = Math.floor(Math.random()*100) + 1;
     var HouseAdFloorC = Math.floor(Math.random()*100) + 1;
-    var HouseAd = "<div class='HouseAd' style='background-color: #0277BD; width: 100%; height: 100px; margin: 8px auto; max-height: 60px; max-width: 468px'></div>";
+    var HouseAd = "<iframe src='http://localhost:8888/OtakuVoice/wp-content/themes/OtakuVoice/house/house.html'></iframe>";
     console.log("%Chance of House Ad " + HouseAdChance + "%");
     console.log("House Ad Floor A " + HouseAdFloorA);
     console.log("House Ad Floor B " + HouseAdFloorB);

@@ -17,16 +17,21 @@ main {
 article {
     display: grid;
 }
-
 article > p {
     margin: 8px 0;
     color: #333333;
     font-family: 'Open Sans', sans-serif;
     font-weight: 400;
 }
-
-artice > ins {
+article > ins {
     margin: 8px 0;
+}
+article > iframe {
+    width: 100%;
+    border-width: 0;
+    border-style: none;
+    border-color: initial;
+    border-image: initial;
 }
 /* Main Post Styles */
 #OV-Post {
@@ -165,6 +170,13 @@ artice > ins {
     width: 100%;
     margin: 16px auto 16px auto;
     }
+.OV-SidebarOther > iframe {
+    width: 100%;
+    border-width: 0;
+    border-style: none;
+    border-color: initial;
+    border-image: initial;
+}
 .OV-PostSmall { 
     padding-top: 56.25%;
     position: relative;

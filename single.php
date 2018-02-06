@@ -93,7 +93,7 @@
                         $args=array(
                             'tag__in' => $tagIDs,
                             'post__not_in' => array($post->ID),
-                            'showposts'=>3,
+                            'showposts'=>2,
                             'caller_get_posts'=>1
                         );
                         $my_query = new WP_Query($args);

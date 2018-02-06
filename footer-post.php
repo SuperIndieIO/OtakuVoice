@@ -69,6 +69,14 @@
     <!--In-Sidebar Advertising JS-->
     <script async defer type='text/javascript' src='<?php echo get_template_directory_uri(); ?>/js/OV-InSidebar.js?r=<?php echo time(); ?>'></script>
     
+    <!--Google Adsense-->
+    <script>
+        my_google_ad_channel = '<?php the_author_meta( authoradsense ); ?>';
+        [].forEach.call(document.querySelectorAll('.adsbygoogle'), function(){
+            (adsbygoogle = window.adsbygoogle || []).push({ params: { google_ad_channel: my_google_ad_channel} });
+        });
+    </script>
+    
     <!--Start Quantcast JS-->
     <script type="text/javascript">
         var _qevents = _qevents || [];

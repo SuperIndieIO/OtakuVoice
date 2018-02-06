@@ -11,12 +11,12 @@ $( document ).ready(function() {
     $('.OV-SidebarOther:last').css( 'top' , (OVSideContentHeight + 32) );
     $('.OV-SidebarOther:last').css( 'margin-bottom', '0');
 
-    var AdUnitD = '<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><!-- OtakuVoice-Sidebar-A --><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-8642963533812241" data-ad-slot="2323846402" data-ad-format="auto"></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script>';
-    var AdUnitE = '<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><!-- OtakuVoice-Sidebar-B --><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-8642963533812241" data-ad-slot="8111359701" data-ad-format="auto"></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script>';
-    var AdUnitF = '<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><!-- OtakuVoice-Sidebar-C --><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-8642963533812241" data-ad-slot="9387237765" data-ad-format="auto"></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script>';
-    var HouseAd = "<div class='HouseAd' style='background-color: #0277BD; width: 100%; height: 100px;'></div>";
+    var AdUnitD = '<!-- OtakuVoice-Sidebar-A --><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-8642963533812241" data-ad-slot="2323846402" data-ad-format="auto"></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script>';
+    var AdUnitE = '<!-- OtakuVoice-Sidebar-B --><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-8642963533812241" data-ad-slot="8111359701" data-ad-format="auto"></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script>';
+    var AdUnitF = '<!-- OtakuVoice-Sidebar-C --><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-8642963533812241" data-ad-slot="9387237765" data-ad-format="auto"></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script>';
+    var HouseAd = '<iframe src="http://localhost:8888/OtakuVoice/wp-content/themes/OtakuVoice/house/house.html"></iframe>';
 
-    var HouseAdChance = 11;
+    var HouseAdChance = 0;
     var HouseAdFloorD = Math.floor(Math.random()*100) + 1;
     var HouseAdFloorE = Math.floor(Math.random()*100) + 1;
     var HouseAdFloorF = Math.floor(Math.random()*100) + 1;
