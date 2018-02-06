@@ -29,9 +29,11 @@
     </div>
 </footer>
 <span>
+    <!--Detect Adsense Author Channel-->
     <script>
         var my_google_ad_channel = '<?php the_author_meta( authoradsense ); ?>';
     </script>
+    
     <!--Defer Image Load JS-->
     <script>
         function init() {
@@ -71,7 +73,6 @@
     
     <!--In-Sidebar Advertising JS-->
     <script async defer type='text/javascript' src='<?php echo get_template_directory_uri(); ?>/js/OV-InSidebar.js?r=<?php echo time(); ?>'></script>
-    
     
     <!--Start Quantcast JS-->
     <script type="text/javascript">
