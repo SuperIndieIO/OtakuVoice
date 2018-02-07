@@ -230,7 +230,7 @@ article > iframe {
     }
 
 @media(max-width: 479px) { .sidebar-responsive { max-width: 320px; max-height: 250px;} }
-    @media(min-width: 480px) { .sidebar-responsive { max-width: 468px; max-height: 250px; } }
+@media(min-width: 480px) { .sidebar-responsive { max-width: 468px; max-height: 250px; } }
 @media(min-width: 960px) { .sidebar-responsive {max-width: 728px; } }
     @media(min-width: 1056px) { .sidebar-responsive { max-width: 300px; max-height: 250px; } }
 
@@ -329,6 +329,9 @@ article > iframe {
     }
     article > * {
         grid-column: 2;
+    }
+    article > p.embed-container {
+        grid-column: 1 / 4;
     }
     aside {
         grid-column: 1;
