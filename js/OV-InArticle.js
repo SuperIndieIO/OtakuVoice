@@ -34,9 +34,9 @@ $( document ).ready(function() {
     else {
         //Setup Creatives for the Ad Units
         //TODO: Creatives
-        AdUnitA = '<!-- OtakuVoice-InArticle-A --><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-8642963533812241" data-ad-slot="8277158463" data-ad-format="auto"></ins>';
-        AdUnitB = '<!-- OtakuVoice-InArticle-B --><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-8642963533812241" data-ad-slot="6778096736" data-ad-format="auto"></ins>';
-        AdUnitC = '<!-- OtakuVoice-InArticle-C --><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-8642963533812241" data-ad-slot="9307346713" data-ad-format="auto"></ins>';
+        AdUnitA = '<!-- OtakuVoice-InArticle-A --><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-8642963533812241" data-ad-slot="8277158463" data-ad-format="horizontal"></ins>';
+        AdUnitB = '<!-- OtakuVoice-InArticle-B --><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-8642963533812241" data-ad-slot="6778096736" data-ad-format="horizontal"></ins>';
+        AdUnitC = '<!-- OtakuVoice-InArticle-C --><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-8642963533812241" data-ad-slot="9307346713" data-ad-format="horizontal"></ins>';
     }
 
     //Change Creative to a House Ad
