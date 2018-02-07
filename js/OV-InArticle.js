@@ -95,4 +95,9 @@ $( document ).ready(function() {
     //DEBUG CONSOLE
     console.log("Total Words: " + OVWordCount);
     console.log("Total Paragraphs: " + OVParagraphs);
+    
+    //Send Load Call for Adsense
+    [].forEach.call(document.querySelectorAll('.adsbygoogle'), function(){
+        (adsbygoogle = window.adsbygoogle || []).push({ params: { google_ad_channel: my_google_ad_channel} });
+    });
 });

@@ -11,9 +11,9 @@ $( document ).ready(function() {
     $('.OV-SidebarOther:last').css( 'top' , (OVSideContentHeight + 32) );
     $('.OV-SidebarOther:last').css( 'margin-bottom', '0');
 
-    var AdUnitD = '<!-- OtakuVoice-Sidebar-A --><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-8642963533812241" data-ad-slot="2323846402" data-ad-format="auto"></ins>';
-    var AdUnitE = '<!-- OtakuVoice-Sidebar-B --><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-8642963533812241" data-ad-slot="8111359701" data-ad-format="auto"></ins>';
-    var AdUnitF = '<!-- OtakuVoice-Sidebar-C --><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-8642963533812241" data-ad-slot="9387237765" data-ad-format="auto"></ins>';
+    var AdUnitD = '<!-- OtakuVoice-Sidebar-A --><ins class="adsbygoogle sidebar-responsive" style="display:block; margin: 0 auto;" data-ad-client="ca-pub-8642963533812241" data-ad-slot="2323846402" data-ad-format="horizontal, rectangle"></ins>';
+    var AdUnitE = '<!-- OtakuVoice-Sidebar-B --><ins class="adsbygoogle sidebar-responsive" style="display:block; margin: 0 auto;" data-ad-client="ca-pub-8642963533812241" data-ad-slot="8111359701" data-ad-format="horizontal, rectangle"></ins>';
+    var AdUnitF = '<!-- OtakuVoice-Sidebar-C --><ins class="adsbygoogle sidebar-responsive" style="display:block; margin: 0 auto;" data-ad-client="ca-pub-8642963533812241" data-ad-slot="9387237765" data-ad-format="horizontal, rectangle"></ins>';
     var HouseAd = '<iframe src="http://localhost:8888/OtakuVoice/wp-content/themes/OtakuVoice/house/house.html"></iframe>';
 
     var HouseAdChance = 0;
