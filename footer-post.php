@@ -66,7 +66,7 @@
     <script type='text/javascript' src='<?php echo get_template_directory_uri(); ?>/js/OV-Publishing.js'></script>
     
     <!--GA Page Scrolling-->
-    <script async type='text/javascript' src='<?php echo get_template_directory_uri(); ?>/js/OV-Page.js?r=<?php echo time(); ?>'></script>
+    <script async type='text/javascript' src='<?php echo get_template_directory_uri(); ?>/js/OV-Page.min.js?r=<?php echo time(); ?>'></script>
     
     <!--In-Article Advertising JS-->
     <script async defer type='text/javascript' src='<?php echo get_template_directory_uri(); ?>/js/OV-InArticle.min.js?r=<?php echo time(); ?>'></script>

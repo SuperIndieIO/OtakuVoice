@@ -244,7 +244,7 @@ footer {
 .navigation li a:hover,
 .navigation li.active a,
 .navigation li.disabled {
-    padding: 12px;
+    padding: 12px 6px;
     color: #484848;
 }
 .navigation li a:hover,
