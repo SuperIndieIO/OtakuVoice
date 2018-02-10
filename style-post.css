@@ -304,6 +304,9 @@ article > iframe {
     article > * {
         grid-column: 3;
     }
+    article > p.embed-container {
+        grid-column: 2 / 5;
+    }
     aside {
         grid-column: 1;
     }
