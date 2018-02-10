@@ -26,6 +26,11 @@ article > p {
     font-family: 'Open Sans', sans-serif;
     font-weight: 400;
 }
+article > h3, h4, h5, h6 {
+    margin: 8px 0;
+    color: #212121;
+    font-family: 'Roboto:400', sans-serif;
+}
 article > ins {
     margin: 8px 0;
 }
@@ -85,11 +90,9 @@ blockquote {
     float: right;
     }
 article > h3 {
-    margin: 1em 0;
     font-size: 24px;
     }
 article > h4, h5, h6 {
-    margin: 1em 0;
     font-size: 20px;
     }
 article > a, a:visited {
