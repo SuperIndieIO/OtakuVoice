@@ -15,7 +15,7 @@ $( document ).ready(function() {
     var PageTitle = document.title;
     ga('send', 'event', 'Reading', 'Article Load', PageTitle, 0, true);
 
-    console.log(PageTitle);
+    //console.log(PageTitle);
 
     setInterval(function(FinishedReading)
     {
@@ -28,7 +28,7 @@ $( document ).ready(function() {
         {
             StartReadTime = ReadTime;
             ReadStart = true;
-            console.log('Started Reading at '+StartReadTime+' Seconds');
+            //console.log('Started Reading at '+StartReadTime+' Seconds');
             ga('send', 'event', 'Reading', 'Time Before Reading', PageTitle, StartReadTime);
         }
 
@@ -36,7 +36,7 @@ $( document ).ready(function() {
         if( WindowBottom >= ContentBottom && !ContentRead)
         {
             FinishReadTime = ReadTime - StartReadTime;
-            console.log('Finshed Reading Content. Total Time Spent Reading Content: '+FinishReadTime+' Seconds');
+            //console.log('Finshed Reading Content. Total Time Spent Reading Content: '+FinishReadTime+' Seconds');
             ga('send', 'event', 'Reading', 'Article Read', PageTitle, 0, true);
             ga('send', 'event', 'Reading', 'Time Read', PageTitle, FinishReadTime, true);
             ContentRead = true;
@@ -45,7 +45,7 @@ $( document ).ready(function() {
         //Check if the window has Reached the Bottom of the Page
         if( WindowBottom >= DocumentBottom && !PageRead)
         {
-            console.log('Finished Reading Page');
+            //console.log('Finished Reading Page');
             ga('send', 'event', 'Reading', 'Page Read', PageTitle, 0, true);
             PageRead = true;
         }
@@ -58,7 +58,7 @@ $( document ).ready(function() {
         if( !ContentRead || !PageRead)
         {
             ReadTime += 1;
-            console.log('Total Time Spend Reading '+ReadTime);
+            //console.log('Total Time Spend Reading '+ReadTime);
         }
     }, 1000);
 

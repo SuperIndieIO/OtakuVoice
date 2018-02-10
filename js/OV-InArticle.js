@@ -45,10 +45,10 @@ $( document ).ready(function() {
     var HouseAdFloorB = Math.floor(Math.random()*100) + 1;
     var HouseAdFloorC = Math.floor(Math.random()*100) + 1;
     var HouseAd = "<iframe src='http://localhost:8888/OtakuVoice/wp-content/themes/OtakuVoice/house/house.html'></iframe>";
-    console.log("%Chance of House Ad " + HouseAdChance + "%");
-    console.log("House Ad Floor A " + HouseAdFloorA);
-    console.log("House Ad Floor B " + HouseAdFloorB);
-    console.log("House Ad Floor C " + HouseAdFloorC);
+    //console.log("%Chance of House Ad " + HouseAdChance + "%");
+    //console.log("House Ad Floor A " + HouseAdFloorA);
+    //console.log("House Ad Floor B " + HouseAdFloorB);
+    //console.log("House Ad Floor C " + HouseAdFloorC);
 
     if (HouseAdFloorA <= HouseAdChance) { AdUnitA = HouseAd; }
     if (HouseAdFloorB <= HouseAdChance) { AdUnitB = HouseAd; }
@@ -93,8 +93,8 @@ $( document ).ready(function() {
     });
 
     //DEBUG CONSOLE
-    console.log("Total Words: " + OVWordCount);
-    console.log("Total Paragraphs: " + OVParagraphs);
+    //console.log("Total Words: " + OVWordCount);
+    //console.log("Total Paragraphs: " + OVParagraphs);
     
     //Send Load Call for Adsense
     [].forEach.call(document.querySelectorAll('.adsbygoogle'), function(){

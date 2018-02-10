@@ -23,24 +23,24 @@ $( document ).ready(function() {
     if (HouseAdFloorD <= HouseAdChance) { AdUnitD = HouseAd; }
     if (HouseAdFloorE <= HouseAdChance) { AdUnitE = HouseAd; }
     if (HouseAdFloorF <= HouseAdChance) { AdUnitF = HouseAd; }
-    console.log("House Ad Floor D " + HouseAdFloorD);
-    console.log("House Ad Floor E " + HouseAdFloorE);
-    console.log("House Ad Floor F " + HouseAdFloorF);
+    //console.log("House Ad Floor D " + HouseAdFloorD);
+    //console.log("House Ad Floor E " + HouseAdFloorE);
+    //console.log("House Ad Floor F " + HouseAdFloorF);
 
     $('aside > .OV-SidebarOther').each(function(i) {
         if ( i == 0 ) {
         $(this).html(AdUnitD);
-        console.log('Inserted Ad Unit D');
+        //console.log('Inserted Ad Unit D');
         }
         if ( i == 1 ) {
         $(this).html(AdUnitE);
-        console.log('Inserted Ad Unit E');
+        //console.log('Inserted Ad Unit E');
         }
         if ( i == 2 ) {
         $(this).html(AdUnitF);
-        console.log('Inserted Ad Unit F');
+        //console.log('Inserted Ad Unit F');
         }
-        console.log(i);
+        //console.log(i);
     });
     
     //Send Load Call for Adsense
