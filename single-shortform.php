@@ -94,10 +94,10 @@ get_header('post');
                             while ($my_query->have_posts()) : $my_query->the_post(); ?>
                 <?php $thumb = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), $size = '' ); ?>
                 <?php $desktop = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), $size = '16/9-medium' ); ?>
-                <?php $tablet = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), $size = '32/9-medium' ); ?>
+                <?php $tablet = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), $size = '8/3-medium' ); ?>
                 <?php $mobile = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), $size = '32/9-small' ); ?>
                 <a href='<?php echo get_the_permalink(); ?>'>
-                    <div class='OV-PostSmall img-background' >
+                    <div class='OV-PostSmallSidebar img-background' >
                         <picture>
                             <source media="(max-width: 479px)" srcset='data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=' data-srcset='<?php echo $mobile[0] ?>'>
                             <source media="(min-width: 480px) and (max-width: 639px)" srcset='data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=' data-srcset='<?php echo $tablet[0] ?>'>

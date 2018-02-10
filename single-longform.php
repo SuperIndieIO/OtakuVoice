@@ -106,10 +106,10 @@ get_header('post');
                             while ($my_query->have_posts()) : $my_query->the_post(); ?>
                 <?php $thumb = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), $size = '' ); ?>
                 <?php $desktop = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), $size = '16/9-medium' ); ?>
-                <?php $tablet = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), $size = '32/9-medium' ); ?>
+                <?php $tablet = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), $size = '8/3-medium' ); ?>
                 <?php $mobile = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), $size = '32/9-small' ); ?>
                 <a href='<?php echo get_the_permalink(); ?>'>
-                    <div class='OV-PostSmall img-background' >
+                    <div class='OV-PostSmallSidebar img-background' >
                         <picture>
                             <source media="(max-width: 479px)" srcset='data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=' data-srcset='<?php echo $mobile[0] ?>'>
                             <source media="(min-width: 480px) and (max-width: 639px)" srcset='data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=' data-srcset='<?php echo $tablet[0] ?>'>
@@ -124,7 +124,49 @@ get_header('post');
                 <?php }
                 }
                 $post = $backup;  // copy it back
-                wp_reset_query(); // to use the original query again
+                ?>
+            </div>
+            <div class='OV-SidebarOther'></div>
+            <div class='OV-Sidebar'>
+                <?php //for use in the loop, list 2 post titles related to first tag on current post
+                    $backup = $post;  // backup the current object
+                    $tags = wp_get_post_tags($post->ID);
+                    $tagIDs = array();
+                    if ($tags) {
+                        $tagcount = count($tags);
+                        for ($i = 0; $i < $tagcount; $i++) {
+                            $tagIDs[$i] = $tags[$i]->term_id;
+                        }
+                        $args=array(
+                            'tag__in' => $tagIDs,
+                            'post__not_in' => array($post->ID),
+                            'showposts'=>2,
+                            'offset' => 2,
+                            'caller_get_posts'=>1
+                        );
+                        $my_query = new WP_Query($args);
+                        if( $my_query->have_posts() ) {
+                            while ($my_query->have_posts()) : $my_query->the_post(); ?>
+                <?php $thumb = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), $size = '' ); ?>
+                <?php $desktop = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), $size = '16/9-medium' ); ?>
+                <?php $tablet = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), $size = '8/3-medium' ); ?>
+                <?php $mobile = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), $size = '32/9-small' ); ?>
+                <a href='<?php echo get_the_permalink(); ?>'>
+                    <div class='OV-PostSmallSidebar img-background' >
+                        <picture>
+                            <source media="(max-width: 479px)" srcset='data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=' data-srcset='<?php echo $mobile[0] ?>'>
+                            <source media="(min-width: 480px) and (max-width: 639px)" srcset='data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=' data-srcset='<?php echo $tablet[0] ?>'>
+                            <source media="(min-width: 640px)" srcset='<?php echo $desktop[0] ?>'>
+                            <img class='OV-PostSmallImage' src='<?php echo $thumb[0] ?>'>
+                        </picture>
+                        <h3 class='OV-PostSmallText'><?php echo get_the_title(); ?></h3>
+                    </div>
+                </a>
+                 <?php endwhile;
+                    } else { ?><!--Put Something Here-->
+                <?php }
+                }
+                $post = $backup;  // copy it back 
                 ?>
             </div>
             <div class='OV-SidebarOther'></div>
