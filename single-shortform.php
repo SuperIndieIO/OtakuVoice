@@ -71,7 +71,6 @@ get_header('post');
             </div>
         </article>
         <aside>
-            <div class='OV-SidebarOther'></div>
             <div class='OV-Sidebar'>
                 <?php wp_reset_query(); ?>
                 <?php //for use in the loop, list 2 post titles related to first tag on current post

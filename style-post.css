@@ -14,6 +14,9 @@ header {
 main {
     display: grid;
 }
+a {
+    color: #212121;
+}
 article {
     display: grid;
 }
@@ -32,6 +35,11 @@ article > iframe {
     border-style: none;
     border-color: initial;
     border-image: initial;
+}
+blockquote {
+    border-left: 8px solid #424242;
+    padding: 0 0 0 16px;
+    margin: 0 32px;
 }
 /* Main Post Styles */
 #OV-Post {
@@ -76,15 +84,15 @@ article > iframe {
 #OV-PostDate {
     float: right;
     }
-#OV-PostBodyText > h3 {
+article > h3 {
     margin: 1em 0;
     font-size: 24px;
     }
-#OV-PostBodyText > h4, h5, h6 {
+article > h4, h5, h6 {
     margin: 1em 0;
     font-size: 20px;
     }
-#OV-PostBodyText > a, a:visited {
+article > a, a:visited {
     color: #212121;
     }
 #OV-PostSocialMedia {
