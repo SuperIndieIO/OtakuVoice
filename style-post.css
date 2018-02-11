@@ -224,7 +224,7 @@ article > a, a:visited {
 /*Embed-Container*/
 .embed-container {
     position: relative;
-    margin: 0 0 1em 0;
+    margin: 1em 0 1em 0;
     padding-bottom: 56.25%;
     height: 0;
     overflow: hidden;
