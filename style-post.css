@@ -45,6 +45,8 @@ blockquote {
     border-left: 8px solid #424242;
     padding: 0 0 0 16px;
     margin: 0 32px;
+    font-family: 'Roboto:400', sans-serif;
+    color: #313131;
 }
 /* Main Post Styles */
 #OV-Post {
