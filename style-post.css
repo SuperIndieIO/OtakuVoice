@@ -317,7 +317,7 @@ article > a, a:visited {
     article > * {
         grid-column: 3;
     }
-    article > p.embed-container {
+    article > p.embed-container, .embed-container {
         grid-column: 2 / 5;
     }
     aside {
@@ -354,7 +354,7 @@ article > a, a:visited {
     article > * {
         grid-column: 2;
     }
-    article > p.embed-container {
+    article > p.embed-container, .embed-container {
         grid-column: 1 / 4;
     }
     article > ins {
