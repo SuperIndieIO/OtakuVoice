@@ -106,6 +106,8 @@ function my_new_contactmethods( $contactmethods ) {
     $contactmethods['facebook'] = 'Facebook';
     // Add Title
     $contactmethods['title'] = 'Title';
+    // Add Adsense Code
+    $contactmethods['authoradsense'] = 'Adsense';
 
     return $contactmethods;
 }
