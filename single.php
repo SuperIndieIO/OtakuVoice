@@ -1,15 +1,14 @@
 <?php get_header('post'); ?>
 <body>
     <!--Header logo for OtakuVoice-->
-            <a style='text-decoration: none;' href='<?php echo esc_url( home_url( '/' ) ); ?>'>
-
-    <header>
+    <a style='text-decoration: none;' href='<?php echo esc_url( home_url( '/' ) ); ?>'>
+        <header>
             <h1 id='OV-Otaku'>Otaku</h1>
             <img id='OV-LogoLarge' src='<?php echo get_template_directory_uri(); ?>/img/ov-logo-72.png' />
             <!--<img id='OV-LogoSmall' src='<?php echo get_template_directory_uri(); ?>/img/OtakuVoice-Small.jpg' />-->
             <h1 id='OV-Voice' >Voice</h1>
-        
-                </header></a>
+        </header>
+    </a>
     <main>
         <!--Wordpress Loop Code-->
         <?php $post = get_the_ID(); ?>   

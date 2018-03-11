@@ -1,5 +1,13 @@
 <?php get_header('home'); ?>
 <body>
+    <a style='text-decoration: none;' href='<?php echo esc_url( home_url( '/' ) ); ?>'>
+        <header>
+            <h1 id='OV-Otaku'>Otaku</h1>
+            <img id='OV-LogoLarge' src='<?php echo get_template_directory_uri(); ?>/img/ov-logo-72.png' />
+            <!--<img id='OV-LogoSmall' src='<?php echo get_template_directory_uri(); ?>/img/OtakuVoice-Small.jpg' />-->
+            <h1 id='OV-Voice' >Voice</h1>
+        </header>
+    </a>
     <main>
         <?php $posttype = 0; ?>
         <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>

@@ -14,8 +14,10 @@ a {
     color: #212121;
     }
 header {
-    max-height: 60px;
-    margin: 16px auto 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 72px 1fr 1fr;
+    max-height: 72px;
+    margin: 16px auto 16px auto;
     }
 main {
     overflow: auto;
@@ -25,15 +27,28 @@ footer {
     margin: 32px auto;
     }
 
-/*The Otaku Project Logo Styles*/
+/*Header Styles*/
+#OV-Otaku {
+    margin: 0 16px 0 0;
+    line-height: 72px;
+    vertical-align: middle;
+    text-align: right;
+    grid-column: 2;
+    font-family: 'Comfortaa', cursive;
+    font-size: 3em;
+}
+#OV-Voice {
+    margin: 0 0 0 16px;
+    line-height: 72px;
+    vertical-align: middle;
+    text-align: left;
+    font-family: 'Comfortaa', cursive;
+    font-size: 3em;
+}
 #OV-LogoLarge {
-    display: none;
-    margin: 0 auto;
-    }
-#OV-LogoSmall {
-    display: none;
-    margin: 0 auto;
-    }
+    display: block;
+    grid-column: 3;
+}
 
 /*The Otaku Project Featured Post*/
 .OV-PostLarge {
