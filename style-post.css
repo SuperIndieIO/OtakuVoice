@@ -28,7 +28,7 @@ article > p {
     font-family: 'Open Sans', sans-serif;
     font-weight: 400;
 }
-article > h3, h4, h5, h6 {
+article > h2, h3, h4, h5, h6 {
     margin: 8px 0;
     color: #212121;
     font-family: 'Roboto:400', sans-serif;
@@ -265,7 +265,6 @@ article > a, a:visited {
     width: 100%;
     height: 100%; 
 }
-
 
 /*Universal Sub Classes*/
 .img-background {

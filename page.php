@@ -23,5 +23,5 @@
             <?php the_content(); ?>
         </article>
     </main>
-    <?php get_footer('post'); ?>
+    <?php get_footer('page'); ?>
 </body>
