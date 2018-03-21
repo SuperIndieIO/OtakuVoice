@@ -1,5 +1,5 @@
 <?php /*
-Template Name: Longform Article Template
+Template Name: Long Article Template with Image
 Template Post Type: post
 */
 get_header('post');

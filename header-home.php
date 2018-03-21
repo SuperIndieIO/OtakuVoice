@@ -7,7 +7,7 @@
     <link rel="stylesheet"  type="text/css" href='<?php echo get_template_directory_uri(); ?>/style-home.css?r=<?php echo time(); ?>'/>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400, 900" rel="stylesheet">
     <meta name='viewport' content='initial-scale=1'/>
-    <link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri(); ?>/favicon.ico" />
+    <link type="image/x-icon" rel="icon" href="<?php echo get_stylesheet_directory_uri(); ?>/favicon.ico" />
     <meta name='theme-color' content='#E5E5F2' />
     
     <!--Meta Info-->
@@ -18,7 +18,7 @@
     <!--Facebook Meta Info-->
 	<meta property='og:title' content='Otaku Voice'/>
 	<meta property='og:type' content='website'/>
-	<meta property='og:url' content='www.theotakuproject.com'/>
+	<meta property='og:url' content='www.otakuvoice.com'/>
 	<meta property='og:description' content='Anything and Everything American Otaku'/>
 
     <!--Twitter Meta Info-->
