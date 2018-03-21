@@ -256,7 +256,29 @@ footer {
         display: block;
         }
 }
-
+@media only screen and (max-width: 420px) { 
+    #OV-Otaku {
+        margin: 0 16px 0 0;
+        line-height: 72px;
+        vertical-align: middle;
+        text-align: right;
+        grid-column: 2;
+        font-family: 'Comfortaa', cursive;
+        font-size: 2em;
+    }
+    #OV-Voice {
+        margin: 0 0 0 16px;
+        line-height: 72px;
+        vertical-align: middle;
+        text-align: left;
+        font-family: 'Comfortaa', cursive;
+        font-size: 2em;
+    }
+    #OV-LogoLarge {
+        display: block;
+        grid-column: 3;
+    }
+}
 ::-webkit-scrollbar { 
     display: none; 
     }

@@ -7,7 +7,7 @@
     <link rel="stylesheet"  type="text/css" href='<?php echo get_template_directory_uri(); ?>/style-page.css?r=<?php echo time(); ?>'/>
     <link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri(); ?>/favicon-96x96.ico" />
     <link href="https://fonts.googleapis.com/css?family=Comfortaa|Open+Sans|Roboto:400, 900" rel="stylesheet">
-    <meta name='viewport' content='initial-scale=1'/>   
+    <meta name='viewport' content='width=device-width, initial-scale=1, maximum-scale=1'/>   
     <meta name='theme-color' content='#E5E5F2' />
     
     <!--Meta Info-->
