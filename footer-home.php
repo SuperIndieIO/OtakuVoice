@@ -41,4 +41,14 @@
             } } }
         window.onload = init;
     </script>
+     <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script src="https://www.googletagmanager.com/gtag/js?id=UA-110231473-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-110231473-1');
+      gtag('set', {'user_id': 'USER_ID'}); // Set the user ID using signed-in user_id.
+    </script>
 </span>
