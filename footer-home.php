@@ -30,7 +30,6 @@
     </div>
 </footer>
 <span>
-    
     <!--Defer Image Load JS-->
     <script>
         function init() {

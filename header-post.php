@@ -21,7 +21,8 @@
     <meta name='language' content='english'>
     
     <!--Temporary AMP Support Removal-->
-    <!--<link rel="amphtml" href='amp/'>-->
+    <link rel='canonical' href='<?php echo get_the_permalink(); ?>'>
+    <link rel='amphtml' href='<?php echo get_the_permalink(); ?>/amp/'>
     
     <!--Facebook Meta Info-->
 	<meta property='og:type' content='article'/>
