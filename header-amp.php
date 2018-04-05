@@ -125,6 +125,14 @@
             margin: 0 8px;
             border-radius: 4px;
         }
+        .embed-container {
+            height: 0;
+            padding-bottom: 56.25%;
+        }
+        .embed-container > amp-iframe {
+            height: 0;
+            padding-bottom: 56.25%;
+        }
         /*Social Media Classes*/
         .social-image {
             display: inline-block;
