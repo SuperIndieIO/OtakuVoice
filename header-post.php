@@ -22,7 +22,7 @@
     
     <!--Temporary AMP Support Removal-->
     <link rel='canonical' href='<?php echo get_the_permalink(); ?>'>
-    <link rel='amphtml' href='<?php echo get_the_permalink(); ?>/amp/'>
+    <link rel='amphtml' href='<?php echo get_the_permalink(); ?>amp/'>
     
     <!--Facebook Meta Info-->
 	<meta property='og:type' content='article'/>
