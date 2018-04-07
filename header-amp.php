@@ -129,7 +129,7 @@
             height: 0;
             padding-bottom: 56.25%;
         }
-        .embed-container > amp-iframe {
+        .embed-container amp-iframe {
             height: 0;
             padding-bottom: 56.25%;
         }
