@@ -26,9 +26,9 @@ $( document ).ready(function() {
     if ( blocked ) {
         //Setup House Ads for the Ad Units
         //TODO: Creatives
-        AdUnitA = "<div id='LeaderboardA'><script type='text/javascript' src='http://house.otakuvoice.com/marketing/OV-InArticle-Creative.A.1.4.min.js'></script></div>";
-        AdUnitB = "<div id='LeaderboardB'><script type='text/javascript' src='http://house.otakuvoice.com/marketing/OV-InArticle-Creative.B.1.4.min.js'></script></div>";
-        AdUnitC = "<div id='LeaderboardC'><script type='text/javascript' src='http://house.otakuvoice.com/marketing/OV-InArticle-Creative.C.1.4.min.js'></script></div>";
+        AdUnitA = "<div id='LeaderboardA'><script type='text/javascript' src='https://house.otakuvoice.com/marketing/OV-InArticle-Creative.A.1.4.min.js'></script></div>";
+        AdUnitB = "<div id='LeaderboardB'><script type='text/javascript' src='https://house.otakuvoice.com/marketing/OV-InArticle-Creative.B.1.4.min.js'></script></div>";
+        AdUnitC = "<div id='LeaderboardC'><script type='text/javascript' src='https://house.otakuvoice.com/marketing/OV-InArticle-Creative.C.1.4.min.js'></script></div>";
 
     }
     else {
@@ -44,9 +44,9 @@ $( document ).ready(function() {
     var HouseAdFloorA = Math.floor(Math.random()*100) + 1;
     var HouseAdFloorB = Math.floor(Math.random()*100) + 1;
     var HouseAdFloorC = Math.floor(Math.random()*100) + 1;
-    var HouseAdA = "<div id='LeaderboardA'><script type='text/javascript' src='http://house.otakuvoice.com/marketing/OV-InArticle-Creative.A.1.4.min.js'></script></div>";
-	var HouseAdB = "<div id='LeaderboardB'><script type='text/javascript' src='http://house.otakuvoice.com/marketing/OV-InArticle-Creative.B.1.4.min.js'></script></div>";
-    var HouseAdC = "<div id='LeaderboardC'><script type='text/javascript' src='http://house.otakuvoice.com/marketing/OV-InArticle-Creative.C.1.4.min.js'></script></div>";
+    var HouseAdA = "<div id='LeaderboardA'><script type='text/javascript' src='https://house.otakuvoice.com/marketing/OV-InArticle-Creative.A.1.4.min.js'></script></div>";
+	var HouseAdB = "<div id='LeaderboardB'><script type='text/javascript' src='https://house.otakuvoice.com/marketing/OV-InArticle-Creative.B.1.4.min.js'></script></div>";
+    var HouseAdC = "<div id='LeaderboardC'><script type='text/javascript' src='https://house.otakuvoice.com/marketing/OV-InArticle-Creative.C.1.4.min.js'></script></div>";
 
 	
     //console.log("%Chance of House Ad " + HouseAdChance + "%");
