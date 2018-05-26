@@ -21,39 +21,17 @@ $( document ).ready(function() {
 	
 	var AdUnitPartA = "<!--Leaderboard Ad Unit #";
 	var AdUnitPartB = " --><div id='Leaderboard-";
-<<<<<<< HEAD
-<<<<<<< HEAD
 	var AdUnitPartC = "' class='leaderboard-adunit'><ins class='adsbygoogle' style='display: none;' data-ad-client='ca-pub-8642963533812241' data-ad-slot='4173681018' data-ad-format='horizontal'></ins></div>"
-=======
-	var AdUnitPartC = "' class='leaderboard-adunit'><ins class='adsbygoogle' style='display: block;' data-ad-client='ca-pub-8642963533812241' data-ad-slot='8277158463' data-ad-format='horizontal'></ins></div>"
->>>>>>> 32141ffaf1eed6e51b5f0abd9da9b627909dc0ff
-=======
-	var AdUnitPartC = "' class='leaderboard-adunit'><ins class='adsbygoogle' style='display: block;' data-ad-client='ca-pub-8642963533812241' data-ad-slot='8277158463' data-ad-format='horizontal'></ins></div>"
->>>>>>> 32141ffaf1eed6e51b5f0abd9da9b627909dc0ff
 
     //Function searches the article for all spots to place an ad unit
     $('article > p').each(function(i) {
 		
 		//Check the paragraph number against the Fibonacci Sequence and load a unique ad unit
 		if (CurrentParagraph == fibonacci(N) && CurrentParagraph != 2 && CurrentParagraph < TotalParagraphs) {
-<<<<<<< HEAD
-<<<<<<< HEAD
 			var TheAdUnit = AdUnitPartA + AdUnitNum + AdUnitPartB + AdUnitNum + AdUnitPartC;
 			$(this).after(TheAdUnit);
 			N++;
 			AdUnitNum++
-=======
-=======
->>>>>>> 32141ffaf1eed6e51b5f0abd9da9b627909dc0ff
-			AdUnitNum++
-			var TheAdUnit = AdUnitPartA + AdUnitNum + AdUnitPartB + AdUnitNum + AdUnitPartC;
-			$(this).after(TheAdUnit);
-			N++;
-			console.log('Loaded Ad Unit: Leaderboard-' + AdUnitNum);
-<<<<<<< HEAD
->>>>>>> 32141ffaf1eed6e51b5f0abd9da9b627909dc0ff
-=======
->>>>>>> 32141ffaf1eed6e51b5f0abd9da9b627909dc0ff
 		}
 		
 		//Check if the paragraph number in order to add a skip to the Fibonacci Sequence
@@ -68,14 +46,6 @@ $( document ).ready(function() {
     [].forEach.call(document.querySelector('.adsbygoogle'), function(){
         (adsbygoogle = window.adsbygoogle || []).push({ params: { google_ad_channel: my_google_ad_channel} });
     });
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-	console.log('After Adsense load');
->>>>>>> 32141ffaf1eed6e51b5f0abd9da9b627909dc0ff
-=======
-	console.log('After Adsense load');
->>>>>>> 32141ffaf1eed6e51b5f0abd9da9b627909dc0ff
 		
 	var CheckView = setInterval(function(CheckViewability)
     {
