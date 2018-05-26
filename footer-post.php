@@ -69,10 +69,10 @@
     <script async type='text/javascript' src='<?php echo get_template_directory_uri(); ?>/js/OV-Page.min.js'></script>
     
     <!--In-Article Advertising JS-->
-    <script async defer type='text/javascript' src='<?php echo get_template_directory_uri(); ?>/js/OV-InArticle.min.js'></script>
+    <script async defer type='text/javascript' src='<?php echo get_template_directory_uri(); ?>/js/OV-InArticle.js?r='<?php echo time(); ?>></script>
     
     <!--In-Sidebar Advertising JS-->
-    <script async defer type='text/javascript' src='<?php echo get_template_directory_uri(); ?>/js/OV-InSidebar.min.js'></script>
+    <script async defer type='text/javascript' src='<?php echo get_template_directory_uri(); ?>/js/OV-InSidebar.js?r='<?php echo time(); ?>></script>
     
     <!--Start Quantcast JS-->
     <script type="text/javascript">
