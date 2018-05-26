@@ -47,6 +47,6 @@ $( document ).ready(function() {
 				if( LoadedAdUnits == AdUnitNum ) {clearInterval(CheckView); } //If there are not more units to be loaded, end the interval
 			}
 		});
-    }, 250); //Set interval for 0.1s
+    }, 50); //Set interval for 0.1s
 	
 });

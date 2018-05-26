@@ -1,25 +1,25 @@
 <footer>
     <span itemprop="publisher" itemscope itemtype="https://schema.org/Organization">
         <a href='<?php echo esc_url( home_url( '/' ) ); ?>'>
-        <div itemprop="logo" itemscope itemtype="https://schema.org/ImageObject">
-            <!--<img id='OP-FooterLogo' src='<?php echo get_template_directory_uri(); ?>/img/TheOtakuProjectSmallLogo.png'/>-->
-            <meta itemprop="url" content='<?php echo get_template_directory_uri(); ?>/img/TheOtakuProjectSmallLogo.png'/>
-            <meta itemprop="width" content="300">
-            <meta itemprop="height" content="30">
-        </div>
-        <meta itemprop="name" content="Otaku Voice"/>
-        <meta itemprop='url' content='https://otakuvoice.com'/>
+			<div itemprop="logo" itemscope itemtype="https://schema.org/ImageObject">
+				<img id='OV-FooterLogo' src='<?php echo get_template_directory_uri(); ?>/img/ov-logo-64.png'/>
+				<meta itemprop="url" content='<?php echo get_template_directory_uri(); ?>/img/ov-logo-64.png'/>
+				<meta itemprop="width" content="64">
+				<meta itemprop="height" content="64">
+			</div>
+			<meta itemprop="name" content="Otaku Voice"/>
+			<meta itemprop='url' content='https://otakuvoice.com'/>
         </a>
     </span>
     <div id='OV-FooterSocialIcons'>
-        <a href="http://twitter.com/otakuvoice" onclick="ga('send', 'event', 'Social Follow', 'Twitter Follow', 'Twitter', '1');" target='_blank'>
+        <a href="https://twitter.com/otakuvoice" onclick="ga('send', 'event', 'Social Follow', 'Twitter Follow', 'Twitter', '1');" target='_blank'>
         <img src='<?php echo get_template_directory_uri(); ?>/social-icons/twitter.svg' class='social-image-follow' /></a>
 
-        <a href="http://facebook.com/theotakuvoice" onclick="ga('send', 'event', 'Social Follow', 'Facebook Follow', 'Facebook', '1');" target='_blank'>
+        <a href="https://facebook.com/theotakuvoice" onclick="ga('send', 'event', 'Social Follow', 'Facebook Follow', 'Facebook', '1');" target='_blank'>
         <img src='<?php echo get_template_directory_uri(); ?>/social-icons/facebook.svg' class='social-image-follow' /></a>
-
-        <a href="https://www.youtube.com/channel/UC0hq2bUJYw7NN12pf_7HDCw" onclick="ga('send', 'event', 'Social Follow', 'Youtube Follow', 'Youtube', '1');" target='_blank'>
-        <img src='<?php echo get_template_directory_uri(); ?>/social-icons/youtube.svg' class='social-image-follow' /></a>
+		
+		<a href="https://tumblr.otakuvoice.com" onclick="ga('send', 'event', 'Social Follow', 'Tumblr Follow', 'Tumblr', '1');" target='_blank'>
+        <img src='<?php echo get_template_directory_uri(); ?>/social-icons/tumblr.svg' class='social-image-follow' /></a>
     </div>
     <div id='OV-FooterInfo'>
         <a href='<?php echo esc_url( home_url( '/' ) ); ?>about-us'>About Us</a>
