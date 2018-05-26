@@ -14,20 +14,16 @@ $( document ).ready(function() {
 	var AdUnitNum = 1;
 	var LoadedAdUnits = 0;
 	
-	var AdUnitPartA = "<!--Rectangle Ad Unit #";
-	var AdUnitPartB = " --><div id='Rectangle-";
-	var AdUnitPartC = "' class='rectangle-adunit'><ins class='adsbygoogle' style='display: none;' data-ad-client='ca-pub-8642963533812241' data-ad-slot='9190203971' data-ad-format='horizontal, rectangle'></ins></div>"
+	var AdUnitPlaceholderA = "<!--Rectangle Ad Unit #";
+	var AdUnitPlaceholderB = " --><div id='Rectangle-";
+	var AdUnitPlaceholderC = "' class='rectangle-adunit'></div>"
+	var AdUnit = "<ins class='adsbygoogle' style='display: block;' data-ad-client='ca-pub-8642963533812241' data-ad-slot='9190203971' data-ad-format='horizontal, rectangle'></ins>"
 
     $('aside > .OV-SidebarOther').each(function(i) {
-		var TheAdUnit = AdUnitPartA + AdUnitNum + AdUnitPartB + AdUnitNum + AdUnitPartC;
-        $(this).html(TheAdUnit);
+		var TheAdPlaceholder = AdUnitPlaceholderA + AdUnitNum + AdUnitPlaceholderB + AdUnitNum + AdUnitPlaceholderC;
+        $(this).html(TheAdPlaceholder);
 		AdUnitNum++
         //console.log(i);
-    });
-	
-	//Send Load Call for Adsense
-    [].forEach.call(document.querySelector('.adsbygoogle'), function(){
-        (adsbygoogle = window.adsbygoogle || []).push({ params: { google_ad_channel: my_google_ad_channel} });
     });
 	
 	var CheckView = setInterval(function(CheckViewability)
@@ -41,7 +37,9 @@ $( document ).ready(function() {
 			var CurrentRectangleHeight = $(this).offset().top;
 
 			if( (WindowBottom + 100) >= CurrentRectangleHeight && !$(this).hasClass('loaded')) {
-				$('.adsbygoogle', this).css('display', 'block'); //Final load of the ad unit
+				$(this).after(AdUnit);
+				(adsbygoogle = window.adsbygoogle || []).push({ params: { google_ad_channel: my_google_ad_channel} });
+
 				$(this).addClass('loaded'); //Set class of ad unit as loaded
 				console.log(CurrentRectangle + ' has loaded');
 				LoadedAdUnits++; //Increment total ad load number

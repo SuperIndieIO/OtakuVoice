@@ -19,16 +19,17 @@ $( document ).ready(function() {
 	var AdUnitNum = 0; //Set the starting number of ad units
 	var LoadedAdUnits = 0; //Set the starting number of loaded ad units
 	
-	var AdUnitPartA = "<!--Leaderboard Ad Unit #";
-	var AdUnitPartB = " --><div id='Leaderboard-";
-	var AdUnitPartC = "' class='leaderboard-adunit'><ins class='adsbygoogle' style='display: none;' data-ad-client='ca-pub-8642963533812241' data-ad-slot='4173681018' data-ad-format='horizontal'></ins></div>"
+	var AdUnitPlaceholderA = "<!--Leaderboard Ad Unit #";
+	var AdUnitPlaceholderB = " --><div id='Leaderboard-";
+	var AdUnitPlaceholderC = "' class='leaderboard-adunit'></div>"
+	var AdUnit = "<ins class='adsbygoogle' style='display: block;' data-ad-client='ca-pub-8642963533812241' data-ad-slot='4173681018' data-ad-format='horizontal'></ins>"
 
     //Function searches the article for all spots to place an ad unit
     $('article > p').each(function(i) {
 		
 		//Check the paragraph number against the Fibonacci Sequence and load a unique ad unit
 		if (CurrentParagraph == fibonacci(N) && CurrentParagraph != 2 && CurrentParagraph < TotalParagraphs) {
-			var TheAdUnit = AdUnitPartA + AdUnitNum + AdUnitPartB + AdUnitNum + AdUnitPartC;
+			var TheAdUnit = AdUnitPlaceholderA + AdUnitNum + AdUnitPlaceholderB + AdUnitNum + AdUnitPlaceholderC;
 			$(this).after(TheAdUnit);
 			N++;
 			AdUnitNum++
@@ -40,11 +41,6 @@ $( document ).ready(function() {
 		}
 		
         CurrentParagraph++;
-    });
-	
-    //Send Load Call for Adsense
-    [].forEach.call(document.querySelector('.adsbygoogle'), function(){
-        (adsbygoogle = window.adsbygoogle || []).push({ params: { google_ad_channel: my_google_ad_channel} });
     });
 		
 	var CheckView = setInterval(function(CheckViewability)
@@ -58,8 +54,9 @@ $( document ).ready(function() {
 			var CurrentLeaderboardHeight = $(this).offset().top;
 
 			if( (WindowBottom + 100) >= CurrentLeaderboardHeight && !$(this).hasClass('loaded')) {
-				$('.adsbygoogle', this).css('display', 'block'); //Final load of the ad unit
+				$(this).html(AdUnit) //Final load of the ad unit
 				$(this).addClass('loaded'); //Set class of ad unit as loaded
+        		(adsbygoogle = window.adsbygoogle || []).push({ params: { google_ad_channel: my_google_ad_channel} });
 				console.log(CurrentLeaderboard + ' has loaded');
 				LoadedAdUnits++; //Increment total ad load number
 
