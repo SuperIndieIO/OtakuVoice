@@ -31,14 +31,20 @@
 		"name" : "Otaku Voice Staff"
 	  },
 	  "datePublished" : "2018-04-07",
+	  "dateModified" : "<?php get_the_modified_date(); ?>",
 	  "image" : "<?php echo $thumb[0] ?>",
 	  "articleBody" : "",
 	  "articleSection" : "<?php echo $catList; ?>",
 	  "keywords" : "<?php echo implode( ', ', $tag_names ); ?>",
 	  "url" : "<?php echo get_the_permalink(); ?>",
+	  "mainEntityOfPage": {
+         "@type": "WebPage",
+         "@id": "<?php echo get_the_permalink(); ?>"
+      },
 	  "publisher" : {
 	  	"@type" : "Organization",
-    	"name" : "Otaku Voice"
+    	"name" : "Otaku Voice",
+		"logo" : "<?php echo get_template_directory_uri(); ?>/img/ov-logo-64.png"
   		}
 	}
 	</script>
