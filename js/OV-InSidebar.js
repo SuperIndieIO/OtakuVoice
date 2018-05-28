@@ -17,7 +17,7 @@ $( document ).ready(function() {
 	var AdUnitPlaceholderA = "<!--Rectangle Ad Unit #";
 	var AdUnitPlaceholderB = " --><div id='Rectangle-";
 	var AdUnitPlaceholderC = "' class='rectangle-adunit'></div>"
-	var AdUnit = "<ins class='adsbygoogle' style='display: block;' data-ad-client='ca-pub-8642963533812241' data-ad-slot='9190203971' data-ad-format='horizontal, rectangle'></ins>"
+	var AdUnit = "<ins class='adsbygoogle' style='display: block;' data-ad-client='ca-pub-8642963533812241' data-ad-slot='9190203971' data-ad-format='rectangle'></ins>"
 
     $('aside > .OV-SidebarOther').each(function(i) {
 		var TheAdPlaceholder = AdUnitPlaceholderA + AdUnitNum + AdUnitPlaceholderB + AdUnitNum + AdUnitPlaceholderC;

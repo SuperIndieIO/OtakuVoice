@@ -1,14 +1,14 @@
 <footer>
     <span itemprop="publisher" itemscope itemtype="https://schema.org/Organization">
         <a href='<?php echo esc_url( home_url( '/' ) ); ?>'>
-        <div itemprop="logo" itemscope itemtype="https://schema.org/ImageObject">
-            <!--<img id='OP-FooterLogo' src='<?php echo get_template_directory_uri(); ?>/img/TheOtakuProjectSmallLogo.png'/>-->
-            <meta itemprop="url" content='<?php echo get_template_directory_uri(); ?>/img/TheOtakuProjectSmallLogo.png'/>
-            <meta itemprop="width" content="300">
-            <meta itemprop="height" content="30">
-        </div>
-        <meta itemprop="name" content="Otaku Voice"/>
-        <meta itemprop='url' content='https://otakuvoice.com'/>
+			<div itemprop="logo" itemscope itemtype="https://schema.org/ImageObject">
+				<img id='OV-FooterLogo' src='<?php echo get_template_directory_uri(); ?>/img/ov-logo-64.png'/>
+				<meta itemprop="url" content='<?php echo get_template_directory_uri(); ?>/img/ov-logo-64.png'/>
+				<meta itemprop="width" content="64">
+				<meta itemprop="height" content="64">
+			</div>
+			<meta itemprop="name" content="Otaku Voice"/>
+			<meta itemprop='url' content='https://otakuvoice.com'/>
         </a>
     </span>
     <div id='OV-FooterSocialIcons'>

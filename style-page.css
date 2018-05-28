@@ -16,6 +16,9 @@ header {
 main {
     display: grid;
 }
+footer {
+	margin: 32px 0 0 0;
+}
 article {
     display: grid;
 }

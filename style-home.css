@@ -9,7 +9,7 @@ html, body {
     }
 h1, h2, h3, h4, h5, h6 {
     margin: 0;
-    }
+}
 a {
     color: #212121;
     }
@@ -24,7 +24,7 @@ main {
     }
 footer {
     width: 100%;
-    margin: 32px auto;
+    margin: 32px 0;
     }
 
 /*Header Styles*/
@@ -299,6 +299,9 @@ footer {
     .OV-Headline {
         font-size: 3em;
         }
+	.grid-a .OV-SemiFeaturedHeadline {
+		font-size: 1.5em
+	}
     .grid-a {
         padding-top: 56.25%;
         }
@@ -326,11 +329,14 @@ footer {
         grid-template-columns: 1fr 1fr;
     }
     .OV-Headline {
-        font-size: 3em;
+        font-size: 2em;
         }
-    .OV-SemiFeaturedHeadline {
+    .grid-b .OV-SemiFeaturedHeadline {
         font-size: 1.5em;
     }
+	.grid-a .OV-SemiFeaturedHeadline {
+		font-size: 1.12em;
+	}
     .grid-a {
         padding-top: 56.25%;
         }
@@ -361,10 +367,10 @@ footer {
         grid-template-columns: 1fr;
     }
     .OV-Headline {
-        font-size: 2em;
+        font-size: 1.5em;
         }
     .OV-SemiFeaturedHeadline {
-        font-size: 1.5em;
+        font-size: 1.25em;
     }
     .OV-PostSmallHeadline {
     font-size: 1.25em;

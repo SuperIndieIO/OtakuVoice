@@ -1,4 +1,4 @@
-<?php get_header('home'); ?>
+<?php get_header('archive'); ?>
 <body>
     <a style='text-decoration: none;' href='<?php echo esc_url( home_url( '/' ) ); ?>'>
         <header>

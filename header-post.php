@@ -16,11 +16,34 @@
     <title><?php echo get_the_title(); ?> | Otaku Voice</title>
     <meta name='title' content='<?php echo get_the_title(); ?>'>
     <meta name='description' content='<?php echo(get_the_excerpt()); ?>'>
-    <meta name='section' content='<?php $postcats = get_the_category(); if ($postcats) { foreach($postcats as $cat) { echo $cat->name . ", "; } } ?>'>
-    <meta name='keywords' content='<?php $posttags = get_the_tags(); if ($posttags) { foreach($posttags as $tag) { echo $tag->name . ', '; } } ?>'>
+    <meta name='section' content='<?php $catList = ''; foreach((get_the_category()) as $cat) { $catID = get_cat_ID( $cat->cat_name ); if(!empty($catList)) { $catList .= ', '; } $catList .= $cat->cat_name; } echo $catList; ?>'>
+    <meta name='keywords' content='<?php $my_tags = get_the_tags(); if ( $my_tags ) { foreach ( $my_tags as $tag ) { $tag_names[] = $tag->name; } echo implode( ', ', $tag_names ); }?>'>
     <meta name='language' content='english'>
+	
+	<!--Schema.org JSON Markup-->
+	<script type="application/ld+json">
+	{
+	  "@context" : "http://schema.org",
+	  "@type" : "Article",
+	  "headline" : "<?php echo get_the_title(); ?>",
+	  "author" : {
+		"@type" : "Person",
+		"name" : "Otaku Voice Staff"
+	  },
+	  "datePublished" : "2018-04-07",
+	  "image" : "<?php echo $thumb[0] ?>",
+	  "articleBody" : "",
+	  "articleSection" : "<?php echo $catList; ?>",
+	  "keywords" : "<?php echo implode( ', ', $tag_names ); ?>",
+	  "url" : "<?php echo get_the_permalink(); ?>",
+	  "publisher" : {
+	  	"@type" : "Organization",
+    	"name" : "Otaku Voice"
+  		}
+	}
+	</script>
     
-    <!--Temporary AMP Support Removal-->
+    <!--AMP and Permalink Info-->
     <link rel='canonical' href='<?php echo get_the_permalink(); ?>'>
     <link rel='amphtml' href='<?php echo get_the_permalink(); ?>amp/'>
     
