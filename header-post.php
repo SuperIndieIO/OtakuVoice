@@ -19,41 +19,6 @@
     <meta name='section' content='<?php $catList = ''; foreach((get_the_category()) as $cat) { $catID = get_cat_ID( $cat->cat_name ); if(!empty($catList)) { $catList .= ', '; } $catList .= $cat->cat_name; } echo $catList; ?>'>
     <meta name='keywords' content='<?php $my_tags = get_the_tags(); if ( $my_tags ) { foreach ( $my_tags as $tag ) { $tag_names[] = $tag->name; } echo implode( ', ', $tag_names ); }?>'>
     <meta name='language' content='english'>
-	
-	<!--Schema.org JSON Markup-->
-	<script type="application/ld+json">
-	{
-	  "@context" : "http://schema.org",
-	  "@type" : "Article",
-	  "headline" : "<?php echo get_the_title(); ?>",
-	  "author" : {
-		"@type" : "Person",
-		"name" : "Otaku Voice Staff"
-	  },
-	  "datePublished" : "<?php the_time("M j, Y"); ?>",
-	  "dateModified" : "<?php the_time("M j, Y"); ?>",
-	  "image" : "<?php echo $thumb[0] ?>",
-	  "articleBody" : "",
-	  "articleSection" : "<?php echo $catList; ?>",
-	  "keywords" : "<?php echo implode( ', ', $tag_names ); ?>",
-	  "url" : "<?php echo get_the_permalink(); ?>",
-	  "mainEntityOfPage": {
-         "@type": "WebPage",
-         "@id": "<?php echo get_the_permalink(); ?>"
-      },
-	  "publisher" : {
-	  	"@type" : "Organization",
-    	"name" : "Otaku Voice",
-		"logo" : {
-            "@type": "ImageObject",
-            "name": "Otaku Voice Logo",
-            "width": "64",
-            "height": "64",
-            "url": "<?php echo get_template_directory_uri(); ?>/img/ov-logo-64.png"
-        	}
-  		}
-	}
-	</script>
     
     <!--AMP and Permalink Info-->
     <link rel='canonical' href='<?php echo get_the_permalink(); ?>'>
@@ -75,4 +40,47 @@
     
     <!--Adsense Code-->
     <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+	
+	<!--Schema.org JSON Markup-->
+	<script type="application/ld+json">
+	{
+	  "@context" : "http://schema.org",
+	  "@type" : "Article",
+	  "headline" : "<?php echo get_the_title(); ?>",
+	  "description" : "<?php echo(get_the_excerpt()); ?>",
+	  "author" : {
+		"@type" : "Person",
+		"name" : "<?php echo get_the_author_meta( 'user_nicename' ); ?>",
+		"sameas" : "https://twitter.com/<?php the_author_meta( twitter ); ?>"
+		},
+	  "datePublished" : "<?php the_time("M j, Y"); ?>",
+	  "dateModified" : "<?php the_time("M j, Y"); ?>",
+	  "image" : "<?php echo $thumb[0] ?>",
+	  "articleSection" : "<?php echo $catList; ?>",
+	  "keywords" : "<?php echo implode( ', ', $tag_names ); ?>",
+	  "url" : "<?php echo get_the_permalink(); ?>",
+	  "mainEntityOfPage": {
+         "@type": "WebPage",
+         "@id": "<?php echo get_the_permalink(); ?>"
+      	},
+	  "publisher" : {
+	  	"@type" : "Organization",
+    	"name" : "Otaku Voice",
+		"url" : "https://otakuvoice.com",
+		"logo" : {
+            "@type": "ImageObject",
+            "name": "Otaku Voice Logo",
+            "width": "64",
+            "height": "64",
+            "url": "<?php echo get_template_directory_uri(); ?>/img/ov-logo-64.png"
+        	},
+		"sameas" : {
+			"https://twitter.com/OtakuVoice",
+			"https://facebook.com/TheOtakuVoice",
+			"https://theotakuvoice.tumblr.com"
+  			}
+		}
+	}
+	</script>
+
 </head>
