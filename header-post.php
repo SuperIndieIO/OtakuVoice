@@ -30,8 +30,8 @@
 		"@type" : "Person",
 		"name" : "Otaku Voice Staff"
 	  },
-	  "datePublished" : "2018-04-07",
-	  "dateModified" : "<?php get_the_modified_date(); ?>",
+	  "datePublished" : "<?php the_time("M j, Y"); ?>",
+	  "dateModified" : "<?php the_time("M j, Y"); ?>",
 	  "image" : "<?php echo $thumb[0] ?>",
 	  "articleBody" : "",
 	  "articleSection" : "<?php echo $catList; ?>",
@@ -44,7 +44,13 @@
 	  "publisher" : {
 	  	"@type" : "Organization",
     	"name" : "Otaku Voice",
-		"logo" : "<?php echo get_template_directory_uri(); ?>/img/ov-logo-64.png"
+		"logo" : {
+            "@type": "ImageObject",
+            "name": "Otaku Voice Logo",
+            "width": "64",
+            "height": "64",
+            "url": "<?php echo get_template_directory_uri(); ?>/img/ov-logo-64.png"
+        	}
   		}
 	}
 	</script>
