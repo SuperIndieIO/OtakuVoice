@@ -74,11 +74,11 @@
             "height": "64",
             "url": "<?php echo get_template_directory_uri(); ?>/img/ov-logo-64.png"
         	},
-		"sameas" : {
+		"sameas" : [
 			"https://twitter.com/OtakuVoice",
 			"https://facebook.com/TheOtakuVoice",
 			"https://theotakuvoice.tumblr.com"
-  			}
+  			]
 		}
 	}
 	</script>

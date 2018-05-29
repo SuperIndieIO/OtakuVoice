@@ -413,6 +413,9 @@ article > a, a:visited {
     .OV-SidebarOther {
         width: calc(100% - 32px);
     }
+	.in-article {
+		max-width: 320px;
+	}
 }
 @media only screen and (max-width: 420px) { 
     #OV-Otaku {

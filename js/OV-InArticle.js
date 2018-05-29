@@ -22,7 +22,7 @@ $( document ).ready(function() {
 	var AdUnitPlaceholderA = "<!--Leaderboard Ad Unit #";
 	var AdUnitPlaceholderB = " --><div id='Leaderboard-";
 	var AdUnitPlaceholderC = "' class='leaderboard-adunit'></div>"
-	var AdUnit = "<ins class='adsbygoogle' style='display: block;' data-ad-client='ca-pub-8642963533812241' data-ad-slot='4173681018' data-ad-format='auto'></ins>"
+	var AdUnit = "<ins class='adsbygoogle in-article' style='display: block;' data-ad-client='ca-pub-8642963533812241' data-ad-slot='4173681018' data-ad-format='auto'></ins>"
 
     //Function searches the article for all spots to place an ad unit
     $('article > p').each(function(i) {
