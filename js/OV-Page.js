@@ -15,7 +15,7 @@ $( document ).ready(function() {
     var PageTitle = document.title;
     ga('send', 'event', 'Reading', 'Article Load', PageTitle, 0, true);
 
-    //console.log(PageTitle);
+    console.log(PageTitle);
 
     setInterval(function(FinishedReading)
     {
