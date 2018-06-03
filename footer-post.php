@@ -12,13 +12,13 @@
         </a>
     </span>
     <div id='OV-FooterSocialIcons'>
-        <a href="https://twitter.com/otakuvoice" onclick="ga('send', 'event', 'Social Follow', 'Twitter Follow', 'Twitter', '1');" target='_blank'>
+        <a href="https://twitter.com/otakuvoice" onclick="TrackSocialFollow('Twitter');" target="_blank">
         <img src='<?php echo get_template_directory_uri(); ?>/social-icons/twitter.svg' class='social-image-follow' /></a>
 
-        <a href="https://facebook.com/theotakuvoice" onclick="ga('send', 'event', 'Social Follow', 'Facebook Follow', 'Facebook', '1');" target='_blank'>
+        <a href="https://facebook.com/theotakuvoice" onclick="TrackSocialFollow('Facebook');" target='_blank'>
         <img src='<?php echo get_template_directory_uri(); ?>/social-icons/facebook.svg' class='social-image-follow' /></a>
 		
-		<a href="https://tumblr.otakuvoice.com" onclick="ga('send', 'event', 'Social Follow', 'Tumblr Follow', 'Tumblr', '1');" target='_blank'>
+		<a href="https://tumblr.otakuvoice.com" onclick="TrackSocialFollow('Tumblr');" target='_blank' >
         <img src='<?php echo get_template_directory_uri(); ?>/social-icons/tumblr.svg' class='social-image-follow' /></a>
     </div>
     <div id='OV-FooterInfo'>
@@ -44,6 +44,16 @@
             } } }
         window.onload = init;
     </script>
+	
+	<!--Track Outbound Links-->
+	<script>
+		var TrackSocialFollow = function(platform) {
+			gtag('event', platform + ' follow', {'event_category' : 'Social Follow', 'event_label' : platform, 'value' : '1'});
+		}
+		var TrackSocialShare = function(platform) {
+			gtag('event', platform + ' share', {'event_category' : 'Social Share', 'event_label' : platform, 'value' : '1'});
+		}
+	</script>
     
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script src="https://www.googletagmanager.com/gtag/js?id=UA-110231473-1"></script>
@@ -55,7 +65,7 @@
       gtag('config', 'UA-110231473-1');
       gtag('set', {'user_id': 'USER_ID'}); // Set the user ID using signed-in user_id.
     </script>
-    
+	
     <!--JQuery Code-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     

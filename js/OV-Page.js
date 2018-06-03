@@ -13,6 +13,7 @@ $( document ).ready(function() {
 
     //Check the page title
     var PageTitle = document.title;
+	gtag( 'event', 'Article Load', {'event_category': 'Reading', 'event_label': PageTitle, 'value': true });
     ga('send', 'event', 'Reading', 'Article Load', PageTitle, 0, true);
 
     console.log(PageTitle);
@@ -28,7 +29,8 @@ $( document ).ready(function() {
         {
             StartReadTime = ReadTime;
             ReadStart = true;
-            //console.log('Started Reading at '+StartReadTime+' Seconds');
+            console.log('Started Reading at '+StartReadTime+' Seconds');
+			gtag( 'event', 'Time Before Reading', {'event_category': 'Reading', 'event_label': PageTitle, 'value': StartReadTime });
             ga('send', 'event', 'Reading', 'Time Before Reading', PageTitle, StartReadTime);
         }
 
@@ -36,8 +38,10 @@ $( document ).ready(function() {
         if( WindowBottom >= ContentBottom && !ContentRead)
         {
             FinishReadTime = ReadTime - StartReadTime;
-            //console.log('Finshed Reading Content. Total Time Spent Reading Content: '+FinishReadTime+' Seconds');
+            console.log('Finshed Reading Content. Total Time Spent Reading Content: '+FinishReadTime+' Seconds');
+			gtag( 'event', 'Article Read', {'event_category': 'Reading', 'event_label': PageTitle, 'value': true });
             ga('send', 'event', 'Reading', 'Article Read', PageTitle, 0, true);
+			gtag( 'event', 'Time Read', {'event_category': 'Reading', 'event_label': PageTitle, 'value': FinishReadTime });
             ga('send', 'event', 'Reading', 'Time Read', PageTitle, FinishReadTime, true);
             ContentRead = true;
         }
@@ -45,7 +49,8 @@ $( document ).ready(function() {
         //Check if the window has Reached the Bottom of the Page
         if( WindowBottom >= DocumentBottom && !PageRead)
         {
-            //console.log('Finished Reading Page');
+            console.log('Finished Reading Page');
+			gtag( 'event', 'Page Read', {'event_category': 'Reading', 'event_label': PageTitle, 'value': true });
             ga('send', 'event', 'Reading', 'Page Read', PageTitle, 0, true);
             PageRead = true;
         }
@@ -58,7 +63,7 @@ $( document ).ready(function() {
         if( !ContentRead || !PageRead)
         {
             ReadTime += 1;
-            //console.log('Total Time Spend Reading '+ReadTime);
+            console.log('Total Time Spend Reading '+ReadTime);
         }
     }, 1000);
 
