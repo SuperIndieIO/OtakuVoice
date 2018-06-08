@@ -12,12 +12,13 @@
     <script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
 
     <!--Styles-->
-    <link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri(); ?>/favicon.ico" />
+    <link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri(); ?>/favicon-96x96.ico" />
     <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet">
     <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1"> 
     <meta name='theme-color' content='#00796B' />
     <link rel="canonical" href='<?php echo get_the_permalink(); ?>'>
     
+	<!--AMP Styles-->
     <style amp-custom>
         /* any custom style goes here */
         body {
@@ -149,6 +150,48 @@
             }
 
     </style>
-    
     <style amp-boilerplate> body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+	
+	<!--Schema.org JSON Markup-->
+	<script type="application/ld+json">
+	{
+	  "@context" : "http://schema.org",
+	  "@type" : "Article",
+	  "headline" : "<?php echo get_the_title(); ?>",
+	  "description" : "<?php echo(get_the_excerpt()); ?>",
+	  "author" : {
+		"@type" : "Person",
+		"name" : "<?php echo get_the_author_meta( 'user_nicename' ); ?>",
+		"sameas" : "https://twitter.com/<?php the_author_meta( twitter ); ?>"
+		},
+	  "datePublished" : "<?php the_time("M j, Y"); ?>",
+	  "dateModified" : "<?php the_time("M j, Y"); ?>",
+	  "image" : "<?php echo $thumb[0] ?>",
+	  "articleSection" : "<?php echo $catList; ?>",
+	  "keywords" : "<?php echo implode( ', ', $tag_names ); ?>",
+	  "url" : "<?php echo get_the_permalink(); ?>",
+	  "mainEntityOfPage": {
+         "@type": "WebPage",
+         "@id": "<?php echo get_the_permalink(); ?>"
+      	},
+	  "publisher" : {
+	  	"@type" : "Organization",
+    	"name" : "Otaku Voice",
+		"url" : "https://otakuvoice.com",
+		"logo" : {
+            "@type": "ImageObject",
+            "name": "Otaku Voice Logo",
+            "width": "64",
+            "height": "64",
+            "url": "<?php echo get_template_directory_uri(); ?>/img/ov-logo-64.png"
+        	},
+		"sameas" : [
+			"https://twitter.com/OtakuVoice",
+			"https://facebook.com/TheOtakuVoice",
+			"https://theotakuvoice.tumblr.com"
+  			]
+		}
+	}
+	</script>
+	
 </head>
