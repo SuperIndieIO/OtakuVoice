@@ -152,6 +152,10 @@
     </style>
     <style amp-boilerplate> body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
 	
+	<?php the_post(); ?><!--Gather Post Excerpt Information for Meta Tags-->  
+	<?php $post = get_the_ID(); ?>
+    <?php $thumb = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'post-amp' ); ?> 
+	
 	<!--Schema.org JSON Markup-->
 	<script type="application/ld+json">
 	{
@@ -167,8 +171,8 @@
 	  "datePublished" : "<?php the_time("M j, Y"); ?>",
 	  "dateModified" : "<?php the_time("M j, Y"); ?>",
 	  "image" : "<?php echo $thumb[0] ?>",
-	  "articleSection" : "<?php echo $catList; ?>",
-	  "keywords" : "<?php echo implode( ', ', $tag_names ); ?>",
+	  "articleSection" : "<?php $catList = ''; foreach((get_the_category()) as $cat) { $catID = get_cat_ID( $cat->cat_name ); if(!empty($catList)) { $catList .= ', '; } $catList .= $cat->cat_name; } echo $catList; ?>",
+	  "keywords" : "<?php $my_tags = get_the_tags(); if ( $my_tags ) { foreach ( $my_tags as $tag ) { $tag_names[] = $tag->name; } echo implode( ', ', $tag_names ); }?>",
 	  "url" : "<?php echo get_the_permalink(); ?>",
 	  "mainEntityOfPage": {
          "@type": "WebPage",
@@ -193,5 +197,6 @@
 		}
 	}
 	</script>
+	
 	
 </head>

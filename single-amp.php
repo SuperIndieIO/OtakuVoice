@@ -1,7 +1,6 @@
 <?php get_header('amp'); ?>
 <body>
     <!--Wordpress loop code-->
-        <?php the_post(); ?>
         <?php $post = get_the_ID(); ?>
         <?php $thumb = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'post-amp' ); ?>
         <?php $alt_text = get_post_meta($post->ID, '_wp_attachment_image_alt', true); ?>
