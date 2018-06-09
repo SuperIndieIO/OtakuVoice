@@ -37,7 +37,8 @@
             } } }
         window.onload = init;
     </script>
-     <!-- Global site tag (gtag.js) - Google Analytics -->
+	
+    <!-- Global site tag (gtag.js) - Google Analytics -->
     <script src="https://www.googletagmanager.com/gtag/js?id=UA-110231473-1"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -47,4 +48,26 @@
       gtag('config', 'UA-110231473-1');
       gtag('set', {'user_id': 'USER_ID'}); // Set the user ID using signed-in user_id.
     </script>
+	
+	<!--Facebook JS SDK-->
+	<script>
+	  window.fbAsyncInit = function() {
+		FB.init({
+		  appId      : '585600295152171',
+		  xfbml      : true,
+		  version    : 'v3.0'
+		});
+
+		FB.AppEvents.logPageView();
+
+	  };
+
+	  (function(d, s, id){
+		 var js, fjs = d.getElementsByTagName(s)[0];
+		 if (d.getElementById(id)) {return;}
+		 js = d.createElement(s); js.id = id;
+		 js.src = "https://connect.facebook.net/en_US/sdk.js";
+		 fjs.parentNode.insertBefore(js, fjs);
+	   }(document, 'script', 'facebook-jssdk'));
+	</script>
 </span>

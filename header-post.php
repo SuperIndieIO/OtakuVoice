@@ -36,6 +36,7 @@
 	<meta property="article:published_time" content='<?php the_time("c"); ?>'>
 	<meta property='article:modified_time' content='<?php the_modified_time("c");?>'>
 	<meta property='og:site_name' content='Otaku Voice'>
+	<meta property='fb:app_id' content='585600295152171'>
 
     <!--Twitter Meta Info-->
 	<meta name='twitter:card' content='summary_large_image'>
@@ -43,7 +44,8 @@
 	<meta name='twitter:title' content='<?php echo get_the_title(); ?>'>
 	<meta name='twitter:image' content='<?php echo $thumb[0] ?>'>
 	<meta name='twitter:description' content='<?php echo strip_tags(get_the_excerpt($post->ID)); ?>'>
-	<meta name="twitter:creator" content='@OtakuVoice'>
+	<meta name='twitter:site' content='@OtakuVoice'>
+	<meta name='twitter:creator' content='@<?php the_author_meta( twitter ); ?>'>
     
     <!--Adsense Code-->
     <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
