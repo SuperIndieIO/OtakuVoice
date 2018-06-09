@@ -29,7 +29,7 @@ get_header('post');
                 <source media='(min-width: 480px) and (max-width: 639px)' srcset='<?php echo $tablet[0] ?>'>
                 <source media='(min-width: 640px) and (max-width: 960px)' srcset='<?php echo $sdesktop[0] ?>'>
                 <source media='(min-width: 960px)' srcset='<?php echo $xdesktop[0] ?>'>
-                <img id='OV-PostImage' src='<?php echo $xdesktop[0] ?>'>
+                <img id='OV-PostImage' src='<?php echo $xdesktop[0] ?>' alt='<?php $thumbnail_id = get_post_thumbnail_id( $post->ID ); $img_alt = get_post_meta($thumbnail_id, '_wp_attachment_image_alt', true); echo $img_alt; ?>'>
             </picture>
 			<meta itemprop='url' content='<?php echo $thumb[0] ?>'/>
 			<meta itemprop='width' content='1296'/>
@@ -45,19 +45,19 @@ get_header('post');
             <!--Social media sharing link-->
             <div id='OV-PostSocialMedia'>
             <a href="http://twitter.com/share" onclick="TrackSocialShare('Twitter');" target='_blank'>
-                <img src='<?php echo get_template_directory_uri(); ?>/social-icons/twitter.svg' class='social-image' /></a>
+                <img src='<?php echo get_template_directory_uri(); ?>/social-icons/twitter.svg' class='social-image' alt='Twitter Logo'/></a>
     
             <a href='https://www.facebook.com/sharer/sharer.php?u=<?php the_permalink(); ?>' onclick="TrackSocialShare('Facebook');" target='_blank'>
-                <img src='<?php echo get_template_directory_uri(); ?>/social-icons/facebook.svg' class='social-image'/></a>
+                <img src='<?php echo get_template_directory_uri(); ?>/social-icons/facebook.svg' class='social-image' alt='Facebook Logo'/></a>
     
             <a href='https://plus.google.com/share?url=<?php the_permalink(); ?>' onclick="TrackSocialShare('Google Plus');" target='_blank'>
-                <img src='<?php echo get_template_directory_uri(); ?>/social-icons/google_plus.svg' class='social-image'/></a>
+                <img src='<?php echo get_template_directory_uri(); ?>/social-icons/google_plus.svg' class='social-image' alt='Google Plus Logo'/></a>
 
             <a href='http://tumblr.com/widgets/share/tool?canonicalUrl=<?php echo get_the_permalink(); ?>' onclick="TrackSocialShare('Tumblr');" target='_blank'>
-                <img src='<?php echo get_template_directory_uri(); ?>/social-icons/tumblr.svg' class='social-image'/></a>
+                <img src='<?php echo get_template_directory_uri(); ?>/social-icons/tumblr.svg' class='social-image' alt='Tumblr Logo'/></a>
 
             <a href='http://www.reddit.com/submit?url=<?php echo get_the_permalink(); ?>&title=<?php echo get_the_title(); ?>' onclick="TrackSocialShare('Reddit');" target='_blank'>
-                <img src='<?php echo get_template_directory_uri(); ?>/social-icons/reddit.svg' class='social-image'/></a>
+                <img src='<?php echo get_template_directory_uri(); ?>/social-icons/reddit.svg' class='social-image' alt='Reddit Logo'/></a>
             </div>
             
             <!--Category related articles-->
@@ -75,7 +75,7 @@ get_header('post');
                                 <source media='(max-width: 479px)' srcset='data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=' data-srcset='<?php echo $mobile[0] ?>'>
                                 <source media='(min-width: 480px) and (max-width: 639px)' srcset='data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=' data-srcset='<?php echo $tablet[0] ?>'>
                                 <source media='(min-width: 640px)' srcset='data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=' data-srcset='<?php echo $desktop[0] ?>'>
-                                <img class='OV-PostSmallImage' src='<?php echo $desktop[0] ?>'>
+                                <img class='OV-PostSmallImage' src='<?php echo $desktop[0] ?>' alt='<?php $thumbnail_id = get_post_thumbnail_id( $post->ID ); $img_alt = get_post_meta($thumbnail_id, '_wp_attachment_image_alt', true); echo $img_alt; ?>'>
                             </picture>
                             <h3 class='OV-PostSmallText'><?php echo get_the_title(); ?></h3>
                         </div>
@@ -115,7 +115,7 @@ get_header('post');
                             <source media="(max-width: 479px)" srcset='data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=' data-srcset='<?php echo $mobile[0] ?>'>
                             <source media="(min-width: 480px) and (max-width: 639px)" srcset='data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=' data-srcset='<?php echo $tablet[0] ?>'>
                             <source media="(min-width: 640px)" srcset='<?php echo $desktop[0] ?>'>
-                            <img class='OV-PostSmallImage' src='<?php echo $thumb[0] ?>'>
+                            <img class='OV-PostSmallImage' src='<?php echo $thumb[0] ?>' alt='<?php $thumbnail_id = get_post_thumbnail_id( $post->ID ); $img_alt = get_post_meta($thumbnail_id, '_wp_attachment_image_alt', true); echo $img_alt; ?>'>
                         </picture>
                         <h3 class='OV-PostSmallText'><?php echo get_the_title(); ?></h3>
                     </div>
@@ -158,7 +158,7 @@ get_header('post');
                             <source media="(max-width: 479px)" srcset='data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=' data-srcset='<?php echo $mobile[0] ?>'>
                             <source media="(min-width: 480px) and (max-width: 639px)" srcset='data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=' data-srcset='<?php echo $tablet[0] ?>'>
                             <source media="(min-width: 640px)" srcset='<?php echo $desktop[0] ?>'>
-                            <img class='OV-PostSmallImage' src='<?php echo $thumb[0] ?>'>
+                            <img class='OV-PostSmallImage' src='<?php echo $thumb[0] ?>' alt='<?php $thumbnail_id = get_post_thumbnail_id( $post->ID ); $img_alt = get_post_meta($thumbnail_id, '_wp_attachment_image_alt', true); echo $img_alt; ?>'>
                         </picture>
                         <h3 class='OV-PostSmallText'><?php echo get_the_title(); ?></h3>
                     </div>

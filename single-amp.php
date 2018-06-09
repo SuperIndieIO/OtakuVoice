@@ -1,5 +1,6 @@
 <?php get_header('amp'); ?>
 <body>
+	<amp-auto-ads type="adsense" data-ad-client="ca-pub-8642963533812241"></amp-auto-ads>
     <!--Wordpress loop code-->
         <?php $post = get_the_ID(); ?>
         <?php $thumb = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'post-amp' ); ?>
@@ -47,24 +48,24 @@
 	<span itemprop="publisher" itemscope itemtype="https://schema.org/Organization">
         <a href='<?php echo esc_url( home_url( '/' ) ); ?>'>
 		<div itemprop="logo" itemscope itemtype="https://schema.org/ImageObject">
-			<amp-img id='OV-FooterLogo' alt="SuperIndieIO Logo" height="30" width="300" src='<?php echo get_template_directory_uri(); ?>/img/SuperIndieIOSmallLogo.png'/>
-			<meta itemprop="url" content='<?php echo get_template_directory_uri(); ?>/img/SuperIndieIOSmallLogo.png'/>
+			<amp-img id='OV-FooterLogo' alt="Otaku Voice Logo" height="64" width="64" src='<?php echo get_template_directory_uri(); ?>/img/ov-logo-64.png'/>
+			<meta itemprop="url" content='<?php echo get_template_directory_uri(); ?>/img/ov-logo-64.png'/>
 			<meta itemprop="width" content="300">
       		<meta itemprop="height" content="30">
 		</div>
-        <meta itemprop="name" content="SuperIndieIO"/>
-		<meta itemprop='url' content='https://superindie.io'/>
+        <meta itemprop="name" content="Otaku Voice"/>
+		<meta itemprop='url' content='https://otakuvoice.com'/>
         </a>
     </span>
         <div id='OV-FooterSocialIcons'>
-                <a href="http://twitter.com/superindieio" target='_blank'>
+                <a href="https://twitter.com/otakuvoice" target='_blank'>
                 <amp-img src='<?php echo get_template_directory_uri(); ?>/social-icons/twitter.svg' class='social-image-follow' layout='fixed' height='24' width='24'/></a>
                 
-                <a href="http://facebook.com/superindieio" target='_blank'>
+                <a href="https://facebook.com/theotakuvoice" target='_blank'>
                 <amp-img src='<?php echo get_template_directory_uri(); ?>/social-icons/facebook.svg' class='social-image-follow' layout='fixed' height='24' width='24'/></a>
                 
-                <a href="https://www.youtube.com/channel/UC0hq2bUJYw7NN12pf_7HDCw" target='_blank'>
-                <amp-img src='<?php echo get_template_directory_uri(); ?>/social-icons/youtube.svg' class='social-image-follow' layout='fixed' height='24' width='24'/></a>
+                <a href="https://theotakuvoice.tumblr.com" target='_blank'>
+                <amp-img src='<?php echo get_template_directory_uri(); ?>/social-icons/tumblr.svg' class='social-image-follow' layout='fixed' height='24' width='24'/></a>
             </div>
         
         <div id='OV-FooterInfo'>
