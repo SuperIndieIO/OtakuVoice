@@ -8,10 +8,10 @@ get_header('post');
     <!--Header logo for OtakuVoice-->
     <a style='text-decoration: none;' href='<?php echo esc_url( home_url( '/' ) ); ?>'>
         <header>
-            <h1 id='OV-Otaku'>Otaku</h1>
-            <img id='OV-LogoLarge' src='<?php echo get_template_directory_uri(); ?>/img/ov-logo-72.png' />
+            <h3 id='OV-Otaku'>Otaku</h3>
+            <img id='OV-LogoLarge' src='<?php echo get_template_directory_uri(); ?>/img/ov-logo-72.png' alt='Otaku Voice 72px Logo'/>
             <!--<img id='OV-LogoSmall' src='<?php echo get_template_directory_uri(); ?>/img/OtakuVoice-Small.jpg' />-->
-            <h1 id='OV-Voice' >Voice</h1>
+            <h3 id='OV-Voice' >Voice</h3>
         </header>
     </a>
     <main>

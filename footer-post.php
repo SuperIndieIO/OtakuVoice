@@ -2,7 +2,7 @@
     <span itemprop="publisher" itemscope itemtype="https://schema.org/Organization">
         <a href='<?php echo esc_url( home_url( '/' ) ); ?>'>
 			<div itemprop="logo" itemscope itemtype="https://schema.org/ImageObject">
-				<img id='OV-FooterLogo' src='<?php echo get_template_directory_uri(); ?>/img/ov-logo-64.png'/>
+				<img id='OV-FooterLogo' src='<?php echo get_template_directory_uri(); ?>/img/ov-logo-64.png' alt='Otaku Voice Logo - 64px'/>
 				<meta itemprop="url" content='<?php echo get_template_directory_uri(); ?>/img/ov-logo-64.png'/>
 				<meta itemprop="width" content="64">
 				<meta itemprop="height" content="64">
@@ -13,13 +13,13 @@
     </span>
     <div id='OV-FooterSocialIcons'>
         <a href="https://twitter.com/otakuvoice" onclick="TrackSocialFollow('Twitter');" target="_blank">
-        <img src='<?php echo get_template_directory_uri(); ?>/social-icons/twitter.svg' class='social-image-follow' /></a>
+        <img src='<?php echo get_template_directory_uri(); ?>/social-icons/twitter.svg' class='social-image-follow' alt='Twitter Follow Logo'/></a>
 
         <a href="https://facebook.com/theotakuvoice" onclick="TrackSocialFollow('Facebook');" target='_blank'>
-        <img src='<?php echo get_template_directory_uri(); ?>/social-icons/facebook.svg' class='social-image-follow' /></a>
+        <img src='<?php echo get_template_directory_uri(); ?>/social-icons/facebook.svg' class='social-image-follow' alt='Facebook Follow Logo'/></a>
 		
 		<a href="https://tumblr.otakuvoice.com" onclick="TrackSocialFollow('Tumblr');" target='_blank' >
-        <img src='<?php echo get_template_directory_uri(); ?>/social-icons/tumblr.svg' class='social-image-follow' /></a>
+        <img src='<?php echo get_template_directory_uri(); ?>/social-icons/tumblr.svg' class='social-image-follow' alt='Tumblr Follow Logo'/></a>
     </div>
     <div id='OV-FooterInfo'>
         <a href='<?php echo esc_url( home_url( '/' ) ); ?>about-us'>About Us</a>
