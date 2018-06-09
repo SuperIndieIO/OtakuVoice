@@ -4,7 +4,7 @@
 <head>
     
     <!--Styles-->
-    <link rel="stylesheet"  type="text/css" href='<?php echo get_template_directory_uri(); ?>/style-post.css?r=<?php echo time(); ?>'/>
+    <link rel="stylesheet"  type="text/css" href='<?php echo get_template_directory_uri(); ?>/style-post.css'/>
     <link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri(); ?>/favicon-96x96.ico" />
     <link href="https://fonts.googleapis.com/css?family=Comfortaa|Open+Sans|Roboto:400, 900" rel="stylesheet">
     <meta name='viewport' content='width=device-width, initial-scale=1, maximum-scale=1'/>   
@@ -18,18 +18,24 @@
     <meta name='description' content='<?php echo(get_the_excerpt()); ?>'>
     <meta name='section' content='<?php $catList = ''; foreach((get_the_category()) as $cat) { $catID = get_cat_ID( $cat->cat_name ); if(!empty($catList)) { $catList .= ', '; } $catList .= $cat->cat_name; } echo $catList; ?>'>
     <meta name='keywords' content='<?php $my_tags = get_the_tags(); if ( $my_tags ) { foreach ( $my_tags as $tag ) { $tag_names[] = $tag->name; } echo implode( ', ', $tag_names ); }?>'>
-    <meta name='language' content='english'>
+    <meta name='language' content='English'>
+	<meta http-equiv="content-language" content="en-us">
     
     <!--AMP and Permalink Info-->
     <link rel='canonical' href='<?php echo get_the_permalink(); ?>'>
     <link rel='amphtml' href='<?php echo get_the_permalink(); ?>amp/'>
     
     <!--Facebook Meta Info-->
-	<meta property='og:type' content='article'/>
-	<meta property='og:title' content='<?php echo get_the_title(); ?>'/>
-	<meta property='og:url' content='<?php echo get_the_permalink(); ?>'/>
-	<meta property='og:image' content='<?php echo $thumb[0] ?>'/>
-	<meta property='og:description' content='<?php get_the_excerpt(); ?>'/>
+	<meta property='og:type' content='article'>
+	<meta property='og:title' content='<?php echo get_the_title(); ?>'>
+	<meta property='og:url' content='<?php echo get_the_permalink(); ?>'>
+	<meta property='og:image:secure_url' content='<?php echo $thumb[0] ?>'>
+	<meta property='og:description' content='<?php get_the_excerpt(); ?>'>
+	<meta property='article:section' content='<?php echo $catList; ?>'>
+	<meta property='article:tag' content='<?php echo implode( ', ', $tag_names ); ?>'>
+	<meta property="article:published_time" content='<?php the_time("c"); ?>'>
+	<meta property='article:modified_time' content='<?php the_modified_time("c");?>'>
+	<meta property='og:site_name' content='Otaku Voice'>
 
     <!--Twitter Meta Info-->
 	<meta name='twitter:card' content='summary_large_image'>
@@ -37,6 +43,7 @@
 	<meta name='twitter:title' content='<?php echo get_the_title(); ?>'>
 	<meta name='twitter:image' content='<?php echo $thumb[0] ?>'>
 	<meta name='twitter:description' content='<?php echo strip_tags(get_the_excerpt($post->ID)); ?>'>
+	<meta name="twitter:creator" content='@OtakuVoice'>
     
     <!--Adsense Code-->
     <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
@@ -53,8 +60,8 @@
 		"name" : "<?php echo get_the_author_meta( 'user_nicename' ); ?>",
 		"sameas" : "https://twitter.com/<?php the_author_meta( twitter ); ?>"
 		},
-	  "datePublished" : "<?php the_time("M j, Y"); ?>",
-	  "dateModified" : "<?php the_time("M j, Y"); ?>",
+	  "datePublished" : "<?php the_time("c"); ?>",
+	  "dateModified" : "<?php the_modified_time("c"); ?>",
 	  "image" : "<?php echo $thumb[0] ?>",
 	  "articleSection" : "<?php echo $catList; ?>",
 	  "keywords" : "<?php echo implode( ', ', $tag_names ); ?>",

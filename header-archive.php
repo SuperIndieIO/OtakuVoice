@@ -13,7 +13,8 @@
     <!--Meta Info-->
     <title><?php echo get_the_title(); ?></title>
     <meta name='description' content='Anything and Everything American Otaku'>
-    <meta name='language' content='english'>
+    <meta name='language' content='English'>
+	<meta http-equiv="content-language" content="en-us">
     
     <!--Facebook Meta Info-->
 	<meta property='og:title' content='<?php echo get_the_title(); ?> | Otaku Voice'/>

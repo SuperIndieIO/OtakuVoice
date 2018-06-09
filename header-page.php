@@ -18,7 +18,8 @@
     <meta name='description' content='<?php echo(get_the_excerpt()); ?>'>
     <meta name='section' content='<?php $postcats = get_the_category(); if ($postcats) { foreach($postcats as $cat) { echo $cat->name . ", "; } } ?>'>
     <meta name='keywords' content='<?php $posttags = get_the_tags(); if ($posttags) { foreach($posttags as $tag) { echo $tag->name . ', '; } } ?>'>
-    <meta name='language' content='english'>
+    <meta name='language' content='English'>
+	<meta http-equiv="content-language" content="en-us">
     
     <!--Facebook Meta Info-->
 	<meta property='og:type' content='article'/>
