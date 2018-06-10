@@ -4,16 +4,6 @@ Template Post Type: post
 */
 get_header('post');
 ?>
-<body>
-    <!--Header logo for OtakuVoice-->
-    <a style='text-decoration: none;' href='<?php echo esc_url( home_url( '/' ) ); ?>'>
-        <header>
-            <h3 id='OV-Otaku'>Otaku</h3>
-            <img id='OV-LogoLarge' src='<?php echo get_template_directory_uri(); ?>/img/ov-logo-72.png' alt='Otaku Voice 72px Logo' />
-            <!--<img id='OV-LogoSmall' src='<?php echo get_template_directory_uri(); ?>/img/OtakuVoice-Small.jpg' />-->
-            <h3 id='OV-Voice' >Voice</h3>
-        </header>
-    </a>
     <main>
         <!--Wordpress Loop Code-->
         <?php $post = get_the_ID(); ?>   

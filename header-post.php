@@ -64,11 +64,15 @@
 		},
 	  "datePublished" : "<?php the_time("c"); ?>",
 	  "dateModified" : "<?php the_modified_time("c"); ?>",
-	  "image" : "<?php echo $thumb[0] ?>",
+	  "image" : {
+	  	"url" : "<?php echo $thumb[0] ?>",
+	  	"width" : "1296",
+		"height" : "720"
+	  },
 	  "articleSection" : "<?php echo $catList; ?>",
 	  "keywords" : "<?php echo implode( ', ', $tag_names ); ?>",
 	  "url" : "<?php echo get_the_permalink(); ?>",
-	  "mainEntityOfPage": {
+	  "mainEntityOfPage" : {
          "@type": "WebPage",
          "@id": "<?php echo get_the_permalink(); ?>"
       	},
@@ -93,3 +97,12 @@
 	</script>
 
 </head>
+<body>
+    <!--Header logo for OtakuVoice-->
+    <a style='text-decoration: none;' href='<?php echo esc_url( home_url( '/' ) ); ?>'>
+        <header>
+            <h3 id='OV-Otaku'>Otaku</h3>
+            <img id='OV-LogoLarge' src='<?php echo get_template_directory_uri(); ?>/img/ov-logo-72.png' alt='Otaku Voice 72px Logo' />
+            <h3 id='OV-Voice' >Voice</h3>
+        </header>
+    </a>

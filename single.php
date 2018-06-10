@@ -1,13 +1,4 @@
 <?php get_header('post'); ?>
-<body>
-    <!--Header logo for OtakuVoice-->
-    <a style='text-decoration: none;' href='<?php echo esc_url( home_url( '/' ) ); ?>'>
-        <header>
-            <h3 id='OV-Otaku'>Otaku</h3>
-            <img id='OV-LogoLarge' src='<?php echo get_template_directory_uri(); ?>/img/ov-logo-72.png' alt='Otaku Voice 72px Logo' />
-            <h3 id='OV-Voice' >Voice</h3>
-        </header>
-    </a>
     <main>
         <!--Wordpress Loop Code-->
         <?php $post = get_the_ID(); ?>   
@@ -17,7 +8,6 @@
         <?php $tablet = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'post-medium' ); ?>
         <?php $small = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'post-small' ); ?>
         <div id='OV-Post'>
-		<span itemprop="image" itemscope itemtype="http://schema.org/ImageObject">
             <picture>
                 <source media='(max-width: 479px)' srcset='<?php echo $mobile[0] ?>'>
                 <source media='(min-width: 480px) and (max-width: 639px)' srcset='<?php echo $tablet[0] ?>'>
@@ -25,10 +15,6 @@
                 <source media='(min-width: 960px)' srcset='<?php echo $xdesktop[0] ?>'>
                 <img id='OV-PostImage' src='<?php echo $xdesktop[0] ?>' alt='<?php $thumbnail_id = get_post_thumbnail_id( $post->ID ); $img_alt = get_post_meta($thumbnail_id, '_wp_attachment_image_alt', true); echo $img_alt;  ?>'>
             </picture>
-			<meta itemprop='url' content='<?php echo $thumb[0] ?>'/>
-			<meta itemprop='width' content='1296'/>
-			<meta itemprop='height' content='720'/>
-		</span>
         </div>
         <article id='OV-PostBody'>
             <h1 id='OV-PostHeadline' itemprop='headline'><?php echo get_the_title(); ?></h1>
